@@ -41,4 +41,4 @@ sudo make install
 
 To run it, just execute **htop** in your terminal. ;)
 
-<img src="/uploads/2011/05/Screen-shot-2011-05-28-at-1.09.54-AM.png" title="htop screenshot" height="435" width="521" alt="htop screenshot" class="alignnone size-full wp-image-558"></img>
+![](/images/2011/05/Screen-shot-2011-05-28-at-1.09.54-AM.png)
