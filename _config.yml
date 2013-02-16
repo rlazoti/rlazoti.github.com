@@ -2,8 +2,6 @@ markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:day/:title
 auto: true
-safe: true
-lsi: false
 rdiscount:
   extensions: [smart]
 
