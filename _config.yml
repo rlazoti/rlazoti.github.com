@@ -1,0 +1,17 @@
+markdown: rdiscount
+pygments: true
+permalink: /:year/:month/:day/:title
+auto: true
+safe: true
+lsi: false
+rdiscount:
+  extensions: [smart]
+
+name: Rodrigo Lazoti
+url: http://rodrigolazoti.com.br
+description: Software development, technology, and other cool stuff.
+twitter: rodrigolazoti
+github: rlazoti
+facebook: rodrigolazoti
+linkedin: rodrigolazoti
+gravatar_url: http://www.gravatar.com/avatar/d6cd131c2a59ae04ca2a41f9b6825b24.png
