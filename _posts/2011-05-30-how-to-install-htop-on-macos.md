@@ -38,7 +38,6 @@ make
 sudo make install
 {% endhighlight %}
 
-
 To run it, just execute **htop** in your terminal. ;)
 
 ![](/images/2011/05/Screen-shot-2011-05-28-at-1.09.54-AM.png)
