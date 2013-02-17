@@ -20,10 +20,8 @@ Para executá-lo basta executar o comando dentro da pasta _dist_ contida no arqu
 java -jar RLPasswordGen.jar
 {% endhighlight %}
 
-<!-- more -->
-
 ![RLPasswordGen](/images/2007/RLPasswordGen.jpg)
 
 Disponibilizei o os fontes do projeto assim como o projeto já compilado e empacotado em um arquivo .jar. O projeto foi feito no eclipse.
 
-Para fazer o [download clique aqui.](http://www.rodrigolazoti.com.br/downloads/RLPasswordGen.zip)
+Para fazer o [download clique aqui.](/downloads/RLPasswordGen.zip)

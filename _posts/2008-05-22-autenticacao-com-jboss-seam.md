@@ -30,51 +30,50 @@ import javax.persistence.Table;
 @Table(name = "USUARIO")
 public class Usuario implements Serializable {
 
-private Long id;
-private String nome;
-private String login;
-private String senha;
+  private Long id;
+  private String nome;
+  private String login;
+  private String senha;
 
-@Id
-@Column(name = "USUARIO_ID")
-public Long getId() {
-return id;
-}
+  @Id
+  @Column(name = "USUARIO_ID")
+  public Long getId() {
+    return id;
+  }
 
-public void setId(Long id) {
-this.id = id;
-}
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-@Column(name="NOME", length=50)
-public String getNome() {
-return nome;
-}
+  @Column(name="NOME", length=50)
+  public String getNome() {
+    return nome;
+  }
 
-public void setNome(String nome) {
-this.nome = nome;
-}
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-@Column(name="SENHA", length=64)
-public String getSenha() {
-return senha;
-}
+  @Column(name="SENHA", length=64)
+  public String getSenha() {
+    return senha;
+  }
 
-public void setSenha(String senha) {
-this.senha = senha;
-}
+  public void setSenha(String senha) {
+    this.senha = senha;
+  }
 
-@Column(name="LOGIN", length=25)
-public String getLogin() {
-return login;
-}
+  @Column(name="LOGIN", length=25)
+  public String getLogin() {
+    return login;
+  }
 
-public void setLogin(String login) {
-this.login = login;
-}
+  public void setLogin(String login) {
+    this.login = login;
+  }
+
 }
 {% endhighlight %}
-
-<!-- more -->
 
 Na _Seam Action_ chama **_UsuarioList_** que foi gerada pelo seam, inclui um método para fazer a pesquisa de usuário pelo seu login e senha:
 
@@ -90,22 +89,20 @@ import com.seedts.rfid.util.UtilException;
 
 @Name("usuarioList")
 public class UsuarioList extends EntityQuery {
-@Override
-public String getEjbql() {
-return "select usuario from Usuario usuario";
-}
 
-public Usuario login(String login, String senha) {
-Usuario usuario = (Usuario) this.getEntityManager().createQuery(
-"select u from Usuario as u where u.login = :login")
-.setParameter("login", login)
-.getSingleResult();
+  @Override
+  public String getEjbql() {
+    return "select usuario from Usuario usuario";
+  }
 
-if (usuario.getSenha().equals(senha))
-return usuario;
-else
-return null;
-}
+  public Usuario login(String login, String senha) {
+    Usuario usuario = (Usuario) this.getEntityManager().createQuery("select u from Usuario as u where u.login = :login").setParameter("login", login).getSingleResult();
+
+    if (usuario.getSenha().equals(senha))
+      return usuario;
+    else
+      return null;
+  }
 }
 {% endhighlight %}
 
@@ -127,28 +124,28 @@ import com.seedts.rfid.util.UtilException;
 
 @Name("authenticator")
 public class Authenticator {
-@Logger
-Log log;
 
-@In
-Identity identity;
+  @Logger
+  Log log;
 
-@In
-FacesMessages facesMessages;
+  @In
+  Identity identity;
 
-public boolean authenticate() throws NoSuchAlgorithmException, UtilException {
+  @In
+  FacesMessages facesMessages;
 
-Usuario usuario = new UsuarioList().login(identity.getUsername(), identity.getPassword());
+  public boolean authenticate() throws NoSuchAlgorithmException, UtilException {
 
-if (usuario != null) {
-Contexts.getSessionContext().set("usuario", usuario);
-identity.addRole("admin");
-return true;
+    Usuario usuario = new UsuarioList().login(identity.getUsername(), identity.getPassword());
 
-}
-else
-return false;
-}
+    if (usuario != null) {
+      Contexts.getSessionContext().set("usuario", usuario);
+      identity.addRole("admin");
+      return true;
+    }
+    else
+      return false;
+  }
 }
 {% endhighlight %}
 
