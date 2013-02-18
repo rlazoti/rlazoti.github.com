@@ -85,6 +85,7 @@ Agora vamos testar o método e ver seu resultado
 
 Resultado:
 
+{% highlight console linenos %}
 0 + 0 = 0
 5 + 2 = 7
 The value can not be less than zero. Current Value = -5
@@ -94,7 +95,7 @@ nil
 The value can not be less than zero. Current Value = -5
 The value can not be less than zero. Current Value = -2
 nil
-
+{% endhighlight %}
 
 Agora vou fazer uma pequena alteração no método para caso algum de seus argumentos seja negativo, o mesmo receba o valor 0 e seja refeito o cálculo.
 
@@ -143,6 +144,7 @@ Finalmente vamos testar no metodo utilizando o comando retry.
 
 O resultado será:
 
+{% highlight console linenos %}
 0 + 0 = 0
 5 + 2 = 7
 The value can not be less than zero. Current Value = -5 | New Value 0
@@ -152,7 +154,7 @@ The value can not be less than zero. Current Value = -2 | New Value 0
 The value can not be less than zero. Current Value = -5 | New Value 0
 The value can not be less than zero. Current Value = -2 | New Value 0
 0 + 0 = 0
-
+{% endhighlight %}
 
 Um único problema é que se não tormar cuidado, podemos fazer o software entrar em um retry infinito. Para entender o que estou dizendo basta alterar umas das atribuições de valor 0, como por exemplo first_number = 0 para um valor negativo como first_number = -10. Rode o programa e veja o que acontece. :D
 

@@ -29,15 +29,7 @@ _Para desenvolvedores que estão criando aplicações gratuitas ou comerciais pa
 
 **Enterprise Program $299.00**
 
-
 _Para as empresas com 500 ou mais empregados que estão criando aplicações proprietárias para o iPhone e iPod touch._
-
-
-
-
-_
-_
-
 
 Em países onde existe Apple Store online, o pagamento pode ser feito via Apple Store pelo iTunes utilizando seu AppleID, no caso do Brasil como não existe Apple Store o pagamento é feito enviando um fax para a Apple com o numero do seu cartão de crédito e alguns outros dados.
 

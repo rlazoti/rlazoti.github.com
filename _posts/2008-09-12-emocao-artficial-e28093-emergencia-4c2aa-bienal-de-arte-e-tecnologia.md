@@ -19,8 +19,6 @@ No evento pude ver diversos trabalhos, misturando tecnologia, arte e muita criat
 
 Algumas dos trabalhos que mais gostei foram:
 
-
-
 	
   * **_Performative Ecologies, de Ruairi Glynn (Irlandês, 2007)_**
 Trabalho baseado em robótica, contém quatro robôs que utilizam um software de reconhecimento de padrão facial e que consegue reconhecer a pessoa depois de ter sua foto armazenada.
@@ -32,6 +30,5 @@ Trabalho muito interessante onde a partir de uma música folclórica escandinava
 	
   * _**PixFlow #2, de LAb[au] (Bélgica, 2007)**_
 Trabalho composto de quatro displays dispostos verticalmente. Um software que simula um campo vetorial em que partículas fluem conforme a evolução de sua densidade tomando caminhos imprevisíveis e formando ramificações bem legais.
-
 
 Fica aí a dica para um programa diferente. ;)

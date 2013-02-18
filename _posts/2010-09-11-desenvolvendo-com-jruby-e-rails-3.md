@@ -148,5 +148,3 @@ trinidad
 Para acessar a aplicação basta abrir a url **http://localhost:3000/contacts** no browser.
 
 Com isso finalizo esse post que demonstra como utilizar JRuby com Rails 3. ;)
-
-

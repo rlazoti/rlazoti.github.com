@@ -33,9 +33,5 @@ _**Organizer: the iPhone Development grouping now collects crash logs, install 
 
 _**iPhone OS 3.1 Simulator uses frameworks more closely matching the device.**_
 
-
-
-
-
 Saiba mais em [http://developer.apple.com/iphone/](http://developer.apple.com/iphone/index.action)
 

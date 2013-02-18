@@ -25,5 +25,19 @@ Fiz um vídeo mostrando como utilizar a VM no Virtual Box e tentei mostrar tamb�
 
 Creio que ainda é muito cedo para tirar conclusões sobre o ChromiumOS, mas nesse pouco tempo que o usei, não me agradou. Me senti muito preso ao Chromium (Browser) e as ferramentas online, agora é aguardar até o lançamento oficial para testá-lo novamente e quem sabe mudar de opinião. :)
 
+<div id="ytplayer"></div>
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-[youtube g5my_CyRuKc]
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '390',
+      width: '640',
+      videoId: 'g5my_CyRuKc'
+    });
+  }
+</script>

@@ -19,25 +19,15 @@ Vamos criar um cenário bem simples com duas entidades Cliente e Usuário para e
 
 Analisando este diagrama vemos que três propriedades são comuns entre as duas classes:
 
-
-
-	
-  * codigo
-
-	
+  * codigo	
   * nome
-
-	
   * dataCadastro
-
 
 Com isso irei mudar nosso diagrama e adicionar uma nova classe que irá conter as três propriedades que serão herdadas por outras classes. O novo diagrama UML ficará da seguinte forma:
 
 ![](/images/2008/08/classe2.jpg)
 
 Falando um pouco sobre JPA, uma entidade pode herdar algo de uma superclasse sendo que esta superclasse é uma classe em seu modelo de domínio que não será transformada em uma entidade. Para resolver este problema temos a anotação **@javax.persistence.MappedSuperclass**.
-
-<!-- more -->
 
 Irei mostrar agora como ficará as entidades Cliente e Usuario fazendo herança das propriedades da classe Pessoa. Primeiro vou criar a superclasse Pessoa que será marcada com a anotação JPA MappedSuperclass:
 
@@ -53,16 +43,16 @@ import javax.persistence.TemporalType;
 @MappedSuperclass
 public abstract class Pessoa {
 
-@Id
-private Long codigo;
+  @Id
+  private Long codigo;
 
-@Column(length = 60, nullable = false)
-private String nome;
+  @Column(length = 60, nullable = false)
+  private String nome;
 
-@Temporal(TemporalType.DATE)
-private Date dataCadastro;
+  @Temporal(TemporalType.DATE)
+  private Date dataCadastro;
 
-//métodos get e set...
+  //métodos get e set...
 }
 {% endhighlight %}
 
@@ -77,13 +67,13 @@ import javax.persistence.Table;
 @Table(name = "Usuarios")
 public class Usuario extends Pessoa {
 
-@Column(length = 20, nullable = false)
-private String login;
+  @Column(length = 20, nullable = false)
+  private String login;
 
-@Column(length = 20, nullable = false)
-private String senha;
+  @Column(length = 20, nullable = false)
+  private String senha;
 
-//métodos get e set...
+  //métodos get e set...
 }
 {% endhighlight %}
 
@@ -96,16 +86,16 @@ import javax.persistence.Table;
 @Table(name="Clientes")
 public class Cliente extends Pessoa {
 
-@Column(length = 50)
-private String email;
+  @Column(length = 50)
+  private String email;
 
-@Column(length = 100)
-private String endereco;
+  @Column(length = 100)
+  private String endereco;
 
-@Column(length = 20)
-private String telefone;
+  @Column(length = 20)
+  private String telefone;
 
-//métodos get e set...
+  //métodos get e set...
 
 }
 {% endhighlight %}

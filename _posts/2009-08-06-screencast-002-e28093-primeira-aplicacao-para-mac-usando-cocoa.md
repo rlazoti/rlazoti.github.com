@@ -23,6 +23,19 @@ tags:
 
 Atendendo a pedidos de algumas pessoas no forum, decidi fazer um exemplo simples mostrando o desenvolvimento de um aplicativo nativo para o Mac OS, utilizando Xcode, Interface Builder, Objective-C e Cocoa.
 
+<div id="ytplayer"></div>
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-
-[youtube _tlflcY2tBU]
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '390',
+      width: '640',
+      videoId: '_tlflcY2tBU'
+    });
+  }
+</script>

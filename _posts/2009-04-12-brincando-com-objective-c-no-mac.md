@@ -17,7 +17,7 @@ tags:
 - Objective-C
 ---
 
-Faz um certo tempo que venho querendo desenvolver algo para o iPhone, mas ultimamente tenho estado meio ocupado por inúmeros motivos, agora felizmente ja me livrei de [algumas coisas](http://www.rodrigolazoti.com.br/?p=173) que consumiam meu tempo e pude começar a brincar com a linguagem Objective-C que é utilizada para desenvolver aplicativos para o iphone, então abri o XCode e alguns pdf's sobre Objective-C e comecei a testar a linguagem.
+Faz um certo tempo que venho querendo desenvolver algo para o iPhone, mas ultimamente tenho estado meio ocupado por inúmeros motivos, agora felizmente ja me livrei de [algumas coisas](/2009/04/02/scbcd-5-test-status-pass/) que consumiam meu tempo e pude começar a brincar com a linguagem Objective-C que é utilizada para desenvolver aplicativos para o iphone, então abri o XCode e alguns pdf's sobre Objective-C e comecei a testar a linguagem.
 
 Nesse post irei colocar um dos exemplos que fiz, procurei comentá-lo bastante (em inglês :D ) para facililar o entendimento do código.
 

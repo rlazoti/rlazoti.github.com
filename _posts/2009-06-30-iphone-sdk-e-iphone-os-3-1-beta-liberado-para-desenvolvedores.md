@@ -19,11 +19,6 @@ A Apple disponibilizou hoje para download o iPhone SDK 3.1 Beta e o iPhone OS 3.
 
 Segue as dicas da própria Apple para quem pretende utilizar o novo SDK e OS:
 
-
-> 
-
-> 
-> 
 	
 >   * iPhone SDK 3.1 beta is for development purposes only. This software should be installed on devices dedicated exclusively for iPhone OS 3.1 beta application development only.
 > 
@@ -42,5 +37,3 @@ Segue as dicas da própria Apple para quem pretende utilizar o novo SDK e OS:
 	
 >   * iPhone SDK 3.1 beta and iPhone OS 3.1 beta are pre-release software and are considered Apple Confidential Information. Any information Apple collects is subject to the terms of the Apple privacy policy.
 > 
-
-

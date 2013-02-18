@@ -24,19 +24,24 @@ Mas como nem tudo são flores uma coisa que me deixou um pouco preocupado foi qu
 
 Edite o arquivo /etc/init.d/alsa-utils
 
-{% highlight xml linenos %}
+{% highlight console linenos %}
 sudo gedit /etc/init.d/alsa-utils
 {% endhighlight %}
 
 Após o texto "stop)" no arquivo (aproximadamente na linha 353), adicione:
 
+{% highlight console linenos %}
 ifconfig wlan0 down
 ifconfig eth0 down
+{% endhighlight %}
 
 Então o arquivo deve ficar assim:
+
+{% highlight console linenos %}
 stop)
 ifconfig wlan0 down
 ifconfig eth0 down
 EXITSTATUS=0
+{% endhighlight %}
 
 Com isso o problema foi resolvido e agora meu Ubuntu desliga e reinicia normalmente. :D

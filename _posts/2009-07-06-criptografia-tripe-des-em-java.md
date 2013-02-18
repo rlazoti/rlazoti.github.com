@@ -16,7 +16,7 @@ tags:
 - Triple DES
 ---
 
-Um dos posts que mais foram acessados e comentados em meu blog foi um escrito sobre [Criptografia em Java utilizando Hashs criptográficos.](http://www.rodrigolazoti.com.br/?p=81)
+Um dos posts que mais foram acessados e comentados em meu blog foi um escrito sobre [Criptografia em Java utilizando Hashs criptográficos.](/2008/10/03/como-utilizar-criptografia-em-java/)
 
 Depois de receber alguns pedidos resolvi escrever este novo post utilizando no exemplo uma criptografia do tipo Triple DES, com esta criptografia podemos encriptografar e descriptografar informações utilizando Java.
 
@@ -49,77 +49,73 @@ import sun.misc.BASE64Encoder;
  * @since 05/07/2009
  */
 public class CryptographyTripleDES {
- private Cipher cipher;
- private byte[] encryptKey;
- private KeySpec keySpec;
- private SecretKeyFactory secretKeyFactory;
- private SecretKey secretKey;
+   private Cipher cipher;
+   private byte[] encryptKey;
+   private KeySpec keySpec;
+   private SecretKeyFactory secretKeyFactory;
+   private SecretKey secretKey;
 
- /**
- * Method that create a new instance of class.
- * @return
- * @throws InvalidKeyException
- * @throws UnsupportedEncodingException
- * @throws NoSuchAlgorithmException
- * @throws NoSuchPaddingException
- * @throws InvalidKeySpecException
- */
- public static CryptographyTripleDES newInstance() throws InvalidKeyException, UnsupportedEncodingException,
- NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeySpecException {
- return new CryptographyTripleDES();
- }
+   /**
+   * Method that create a new instance of class.
+   * @return
+   * @throws InvalidKeyException
+   * @throws UnsupportedEncodingException
+   * @throws NoSuchAlgorithmException
+   * @throws NoSuchPaddingException
+   * @throws InvalidKeySpecException
+   */
+   public static CryptographyTripleDES newInstance() throws InvalidKeyException, UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeySpecException {
+     return new CryptographyTripleDES();
+   }
 
- /**
- * Default Constructor.
- * @throws UnsupportedEncodingException
- * @throws NoSuchAlgorithmException
- * @throws NoSuchPaddingException
- * @throws InvalidKeyException
- * @throws InvalidKeySpecException
- */
- private CryptographyTripleDES() throws UnsupportedEncodingException, NoSuchAlgorithmException,
- NoSuchPaddingException, InvalidKeyException, InvalidKeySpecException {
- String key = "http://www.rodrigolazoti.com.br";
- encryptKey = key.getBytes( "UTF-8" );
- cipher = Cipher.getInstance( "DESede" );
- keySpec = new DESedeKeySpec( encryptKey );
- secretKeyFactory = SecretKeyFactory.getInstance( "DESede" );
- secretKey = secretKeyFactory.generateSecret( keySpec );
- }
+   /**
+   * Default Constructor.
+   * @throws UnsupportedEncodingException
+   * @throws NoSuchAlgorithmException
+   * @throws NoSuchPaddingException
+   * @throws InvalidKeyException
+   * @throws InvalidKeySpecException
+   */
+   private CryptographyTripleDES() throws UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, InvalidKeySpecException {
+     String key = "http://www.rodrigolazoti.com.br";
+     encryptKey = key.getBytes( "UTF-8" );
+     cipher = Cipher.getInstance( "DESede" );
+     keySpec = new DESedeKeySpec( encryptKey );
+     secretKeyFactory = SecretKeyFactory.getInstance( "DESede" );
+     secretKey = secretKeyFactory.generateSecret( keySpec );
+   }
 
- /**
- * Method that encrypts a value.
- * @param value
- * @return
- * @throws InvalidKeyException
- * @throws IllegalBlockSizeException
- * @throws BadPaddingException
- * @throws UnsupportedEncodingException
- */
- public String encrypt( String value ) throws InvalidKeyException, IllegalBlockSizeException, BadPaddingException,
- UnsupportedEncodingException {
- cipher.init( Cipher.ENCRYPT_MODE, secretKey );
- byte[] cipherText = cipher.doFinal( value.getBytes( "UTF-8" ) );
- BASE64Encoder encoder = new BASE64Encoder();
- return encoder.encode( cipherText );
- }
+   /**
+   * Method that encrypts a value.
+   * @param value
+   * @return
+   * @throws InvalidKeyException
+   * @throws IllegalBlockSizeException
+   * @throws BadPaddingException
+   * @throws UnsupportedEncodingException
+   */
+   public String encrypt( String value ) throws InvalidKeyException, IllegalBlockSizeException, BadPaddingException, UnsupportedEncodingException {
+     cipher.init( Cipher.ENCRYPT_MODE, secretKey );
+     byte[] cipherText = cipher.doFinal( value.getBytes( "UTF-8" ) );
+     BASE64Encoder encoder = new BASE64Encoder();
+     return encoder.encode( cipherText );
+   }
 
- /**
- * Methot that decrypts a value.
- * @param value
- * @return
- * @throws InvalidKeyException
- * @throws IllegalBlockSizeException
- * @throws BadPaddingException
- * @throws IOException
- */
- public String decrypt( String value ) throws InvalidKeyException, IllegalBlockSizeException, BadPaddingException,
- IOException {
- cipher.init( Cipher.DECRYPT_MODE, secretKey );
- BASE64Decoder dec = new BASE64Decoder();
- byte[] decipherText = cipher.doFinal( dec.decodeBuffer( value ) );
- return new String( decipherText );
- }
+   /**
+   * Methot that decrypts a value.
+   * @param value
+   * @return
+   * @throws InvalidKeyException
+   * @throws IllegalBlockSizeException
+   * @throws BadPaddingException
+   * @throws IOException
+   */
+   public String decrypt( String value ) throws InvalidKeyException, IllegalBlockSizeException, BadPaddingException, IOException {
+     cipher.init( Cipher.DECRYPT_MODE, secretKey );
+     BASE64Decoder dec = new BASE64Decoder();
+     byte[] decipherText = cipher.doFinal( dec.decodeBuffer( value ) );
+     return new String( decipherText );
+   }
 
 }
 {% endhighlight %}
@@ -139,17 +135,15 @@ import javax.crypto.NoSuchPaddingException;
 
 public class TestCryptographyTripleDES {
 
- public static void main( String[] args ) throws InvalidKeyException, NoSuchAlgorithmException,
- NoSuchPaddingException, InvalidKeySpecException, IllegalBlockSizeException, BadPaddingException, IOException {
+  public static void main( String[] args ) throws InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeySpecException, IllegalBlockSizeException, BadPaddingException, IOException {
 
- CryptographyTripleDES cryptography = CryptographyTripleDES.newInstance();
- String value = "Rodrigo Lazoti";
- System.out.println( "Valor utilizado => " + value );
- String encryptedValue = cryptography.encrypt( value );
- System.out.println( "Valor criptografado => " + encryptedValue );
- String decryptedValue = cryptography.decrypt( encryptedValue );
- System.out.println( "Valor descriptografado => " + decryptedValue );
-
+   CryptographyTripleDES cryptography = CryptographyTripleDES.newInstance();
+   String value = "Rodrigo Lazoti";
+   System.out.println( "Valor utilizado => " + value );
+   String encryptedValue = cryptography.encrypt( value );
+   System.out.println( "Valor criptografado => " + encryptedValue );
+   String decryptedValue = cryptography.decrypt( encryptedValue );
+   System.out.println( "Valor descriptografado => " + decryptedValue );
  }
 
 }

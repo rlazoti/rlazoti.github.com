@@ -21,17 +21,47 @@ O exemplo ira se basear em uma classe chama Pessoa com um atributo nome, seu mé
 Primeiro o javascript para a classe Pessoa:
 
 {% highlight javascript linenos %}
+function Pessoa() {
+	this.nome;
+	this.setNome = setNome;
+	this.getNome = getNome;
 
+	function setNome(nome) {
+		this.nome = nome;
+	}
+
+	function getNome() {
+		return this.nome;
+	}
+}
 {% endhighlight %}
 
 Agora o javascript para a classe Amigo:
-<!-- more -->
-{% highlight javascript linenos %}
 
+{% highlight javascript linenos %}
+function Amigo() {
+	this.telefone;
+	this.getTelefone = getTelefone;
+	this.setTelefone = setTelefone;
+
+	function setTelefone(telefone) {
+		this.telefone = telefone;
+	}
+
+	function getTelefone() {
+		return this.telefone;
+	}
+}
 {% endhighlight %}
 
 E finalmente o exemplo de como aplicar herança em javascript:
 
 {% highlight javascript linenos %}
+Amigo.prototype = new Pessoa();
+var amigo = new Amigo();
 
-{% endhighlight %} 
+amigo.setNome("Rodrigo Lazoti");
+amigo.setTelefone("1234-4567");
+
+alert(amigo.getNome() +"\n"+ amigo.getTelefone());
+{% endhighlight %}

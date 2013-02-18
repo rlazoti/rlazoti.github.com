@@ -239,21 +239,13 @@ E o conteúdo do arquivo hello.jsp:
 {% endhighlight %}
 
 Pronto, nosso exemplo já esta pronto e pode ser testado. Com vimos algumas novidades como:
-
-
-
 	
-  * Interface local e remota são opcionais no EJB 3.1.
-
-	
+  * Interface local e remota são opcionais no EJB 3.1.	
   * No EJB 3.1, vôce pode empacotar seus EJB's em arquivos WAR junto com componentes da camada web. Você não precisa ter sua classes EJB definidas em um arquivo ejb-jar.
-
-	
   * Agora as annotations podem ser usadas em mais tipos de componentes Java EE e o conjunto de anotações usados para injeção de dependência foi padronizada.
-
-	
   * Ao invés de criar deployment descriptors, você pode anotar as classes para especificar que ela é um servlet.
 
 
+Este exemplo criado está disponível no github: 
 
-Este exemplo criado está disponível no github: [http://github.com/rlazoti/tutorial-javaee6-first-project](http://github.com/rlazoti/tutorial-javaee6-first-project)
+[http://github.com/rlazoti/tutorial-javaee6-first-project](http://github.com/rlazoti/tutorial-javaee6-first-project)

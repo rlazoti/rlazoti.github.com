@@ -237,19 +237,12 @@ And the hello.jsp file:
 
 Some news that I used this example:
 
-
-
-	
-  * Local business interfaces are optional in EJB 3.1.
-
-	
-  * In EJB 3.1, you can place enterprise bean classes in the .war file along with web tier components. You don't have to put EJB classes in the ejb-jar file.
-
-	
+  * Local business interfaces are optional in EJB 3.1.	
+  * In EJB 3.1, you can place enterprise bean classes in the .war file along with web tier components. You don't have to put EJB classes in the ejb-jar file.	
   * Annotations can now be used in more types of Java EE components. And the set of annotations used for dependency injection has been standardized.
-
-	
   * Instead of creating deployment descriptors, you can annotate classes to specify servlet-related deployment information.
 
 
-This example is available at github: [http://github.com/rlazoti/tutorial-javaee6-first-project](http://github.com/rlazoti/tutorial-javaee6-first-project)
+This example is available at github:
+
+[http://github.com/rlazoti/tutorial-javaee6-first-project](http://github.com/rlazoti/tutorial-javaee6-first-project)

@@ -13,7 +13,7 @@ Abriram as inscrições para o evento [GDD - Google Developer Day 2009](http://c
 
 Este evento vai abordar diversos assuntos relacionados com os produtos do Google, como maps, app engine, android e GWT. Eu fui neste evento realizando em 2008 e digo que vale muito a pena ir.
 
-[Veja meu relato sobre o evento realizando em 2008.](http://www.rodrigolazoti.com.br/?p=29) 
+[Veja meu relato sobre o evento realizando em 2008.](/2008/06/29/google-developer-day-2008-eu-fui/) 
 
 Minha dica é que os interessados façam a inscrição o mais rapido possivel, pois as vagas se esgotam rápido. ;)
 

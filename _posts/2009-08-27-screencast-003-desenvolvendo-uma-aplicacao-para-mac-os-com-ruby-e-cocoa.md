@@ -20,5 +20,19 @@ tags:
 
 Veja neste screencast como desenvolver uma aplicação de geração de senhas aleatórias nativa para Mac OS utilizando a linguagem Ruby e o framework Cocoa pelas ferramentas Xcode e Interface Builder.
 
+<div id="ytplayer"></div>
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-[youtube lrD_Huxprr0]
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '390',
+      width: '640',
+      videoId: 'lrD_Huxprr0'
+    });
+  }
+</script>

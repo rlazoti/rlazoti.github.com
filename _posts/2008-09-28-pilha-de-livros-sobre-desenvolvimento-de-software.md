@@ -15,17 +15,9 @@ Após quase 1 mês esperando, finalmente minha compra feita na [amazon.com](http
 
 Neste atual pedido comprei os seguintes livros:
 
-
-
-	
-  * Domain-Driven Design - Eric Evans
-
-	
+  * Domain-Driven Design - Eric Evans	
   * Patterns of Enterprise Applications Archittecture - Martin Fowler
-
-	
   * The Pragmatic Programmer - Andrew Hunt / David Thomas
-
 
 Escolhi esses livros por ver muitas recomendações e também por ser sobre um tema que me interessa muito, arquitetura e desenvolvimento de software, onde pretendo me especializar.
 

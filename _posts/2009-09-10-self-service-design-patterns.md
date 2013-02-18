@@ -26,9 +26,7 @@ Costumo ver muito arquiteturas do tipo  Action->Facade->Service->DAO,  que mais
 
 Conforme descrição no Wikipedia:
 
-
 > Design Patterns, descrevem soluções para problemas recorrentes no desenvolvimento de sistemas de software orientados a objetos. Um padrão de projeto estabelece um nome e define o problema, a solução, quando aplicar esta solução e suas conseqüências.
-
 
 Na descrição acima vemos que os padrões de projetos existem para resolver certos problemas em uma arquitetura de software orientado a objetos e não para serem utilizados "á vontade" (self-service), mas infelizmente hoje vejo muitos desenvolvedores aplicando Design Patterns nos projetos apenas para poder dizer ( para outros ou para si mesmo ) que usa o Design Pattern XPTO no seu projeto e/ou que já possui experiência com Design Patterns. Com atitudes assim perde-se 2 vezes, uma no conhecimento pois o desenvolvedor está aprendendo de maneira errada a usar determinado padrão de projeto, e outra perde-se também na qualidade do software desenvolvido.
 
@@ -62,7 +60,7 @@ public class XptoFacade{
 }
 {% endhighlight %}
 
-Me pergunto se este Facade realmente é nessário ja que ele serve apenas para replicar as chamadas de um único Service e sempre me lembro de uma parte do livro [Pojos in Action](http://www.rodrigolazoti.com.br/?p=91), onde o autor fala um pouco sobre Exposed Domain Model, mostrando os prós e contras de um modelo de domínio exposto e de um que utiliza o padrão Facade.
+Me pergunto se este Facade realmente é nessário ja que ele serve apenas para replicar as chamadas de um único Service e sempre me lembro de uma parte do livro [Pojos in Action](/2008/10/14/livro-pojos-in-action), onde o autor fala um pouco sobre Exposed Domain Model, mostrando os prós e contras de um modelo de domínio exposto e de um que utiliza o padrão Facade.
 
 Então para não prolongar muito o post deixo uma dica que considero muito importante:
 

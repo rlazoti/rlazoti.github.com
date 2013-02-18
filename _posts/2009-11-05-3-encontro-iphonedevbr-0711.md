@@ -32,87 +32,13 @@ O segundo encontro, dia 24 de outubro foi um sucesso absoluto de público e tamb
 
 O terceiro encontro e último desse ano ocorrerá nesse próximo final de semana, dia 7 de novembro a partir das 12:30 e contará com as seguintes palestras:
 
+**Palestrante** - **Tema** - **Horário**
 
-
-
-
-
-
-
-**Palestrante**
-
-
-**Tema**
-
-
-**Horário**
-
-
-
-
-
-
-Gustavo
-
-
-Biblioteca Three20 utilizando na aplicação do Facebook
-
-
-12:30
-
-
-
-
-
-
-Adriano (Maya)
-
-
-Otimização, dicas de implementação e como resolver problemas
-
-
-14:30
-
-
-
-
-
-
-Tiago M.
-
-
-Formas de desenvolvimeno de jogos para iPhone
-
-
-15:30
-
-
-
-
-
-
-Ney e Leonardo
-
-
-Jogos avançados utilizando a biblioteca Cocos2D
-
-
-16:30
-
-
-
-
-
-
-Márcio Nunes (Bitix)
-
-
-Valorização de apps
-
-
-17:30
-
-
+Gustavo - Biblioteca Three20 utilizando na aplicação do Facebook - 12:30
+Adriano (Maya) - Otimização, dicas de implementação e como resolver problemas - 14:30
+Tiago M. - Formas de desenvolvimeno de jogos para iPhone - 15:30
+Ney e Leonardo - Jogos avançados utilizando a biblioteca Cocos2D - 16:30
+Márcio Nunes (Bitix) - Valorização de apps - 17:30
 
 Veja mais informações no próprio site do evento:
 

@@ -20,5 +20,19 @@ tags:
 
 Em geral, sempre que uma nova linguagem ou plataforma de desenvolvimento é apresentada utiliza-se um Hello World (programa muito simples, exibindo uma mensagem) para demonstrá-la. O objetivo desse screencast é demonstrar como fazer um Hello World utilizando iPhone SDK.
 
+<div id="ytplayer"></div>
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-[youtube SunqzvvoZx4]
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '390',
+      width: '640',
+      videoId: 'SunqzvvoZx4'
+    });
+  }
+</script>

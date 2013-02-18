@@ -17,7 +17,6 @@ O evento estava com um público grande, com isso ficou um pouco difícil se loco
 
 ![](/images/2007/gdd2008/gdd4.jpg)
 
-<!-- more -->
 A primeira palestra ocorreu as 10:00 com um overview da [Google](http://www.google.com.br) em relação aos seus planos de negócio e o mercado brasileiro.
 
 Depois tivemos um pequeno overview sobre os produtos e tecnologias da Google.

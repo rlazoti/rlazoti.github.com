@@ -23,14 +23,8 @@ Não tive muito tempo pra me dedicar e estudar tudo sobre a prova, por isso estu
 
 _O que utilizei para estudar:_
 
-
-
-	
-  * Livro - Enterprise Javabeans 3.
-
-	
+  * Livro - Enterprise Javabeans 3.	
   * Simulado - EJBPlus 5
-
 
 _Sobre o livro:_
 
@@ -38,21 +32,10 @@ Como disse anteriormente, embora o livro seja bom ele não abrenge todo o conteu
 
 _Sobre o simulado:_
 
-
 Realmente este simulado é muito bom, valeu a pena os $29,00 gastos nele e embora eu não consegui utiliza-lo muito, pois realizei apenas 4 testes (iniciei com o score de 54% e no ultimo fiquei com 75%), mas mesmo assim recomendo.
-
-
 
 _Sobre a prova:_
 
-
 Cairam muitas questoes de transactions, exceptions, session beans (SFSB, SLSB e MDB) e JPA. Interceptors e timers foram muito poucas. Cairam algumas que cobravam um pequeno conhecinhento de tags XML. Security foi bem tranquilo tambem. Uma ultima dica é que treine bastante seu ingles, pois diferente das outras provas que fiz, esta tem questoes com enunciados maiores e uma palavra entendida de forma errada pode fazer voce marcar uma alternativa incorreta.
-
-
-
-
- 
-
-
 
 Agora é descançar um pouco e comemorar a nova conquista! :D

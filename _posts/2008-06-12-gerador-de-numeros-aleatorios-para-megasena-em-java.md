@@ -22,11 +22,8 @@ Para executá-lo basta executar o comando:
 java -jar RLLoteriaGen.jar
 {% endhighlight %}
 
-
-<!-- more -->
-
 O projeto foi feito no [Eclipse](http://www.eclipse.org).
 
 Disponibilizei o os fontes do projeto em um repositório no github.[ Clique aqui para acessar o repositório.](http://github.com/rlazoti/RLLoteriaGen)
 
-Para fazer o [download do arquivo jar clique aqui.](http://www.rodrigolazoti.com.br/downloads/RLLoteriaGen.jar)
+Para fazer o [download do arquivo jar clique aqui.](/downloads/RLLoteriaGen.jar)

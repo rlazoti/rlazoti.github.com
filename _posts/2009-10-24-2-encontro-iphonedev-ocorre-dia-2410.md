@@ -25,99 +25,19 @@ Nestes encontro, os desenvolvedores abordarão assuntos técnicos sobre o desenv
 
 Confira o cronograma do evento, que ocorrerá no MIS:
 
+**Palestrante** - **Tema** - **Horário**
 
+Alan Silva - Introdução ao desenvolvimento para iPhone e iPodTouch - 13:00
 
+Intervalo - Intervalo - 14:00
 
+Ivan Salina Fernandes - Publicidade em aplicativos - 15:00
 
+Rafael Fischmann - Melhores práticas para promoção de apps - 16:00
 
+Ricardo Augusto - Mapkit - 17:00
 
-
-**Palestrante**
-
-
-**Tema**
-
-
-**Horário**
-
-
-
-
-
-
-Alan Silva
-
-
-Introdução ao desenvolvimento para iPhone e iPodTouch
-
-
-13:00
-
-
-
-
-
-
-Intervalo
-
-
-Intervalo
-
-
-14:00
-
-
-
-
-
-
-Ivan Salina Fernandes
-
-
-Publicidade em aplicativos
-
-
-15:00
-
-
-
-
-
-
-Rafael Fischmann
-
-
-Melhores práticas para promoção de apps
-
-
-16:00
-
-
-
-
-
-
-Ricardo Augusto
-
-
-Mapkit
-
-
-17:00
-
-
-
-
-
-
-Mads Rasmussen
-
-
-in-app payments
-
-
-18:00
-
+Mads Rasmussen - in-app payments - 18:00
 
 
 Veja mais informações no próprio site do evento:

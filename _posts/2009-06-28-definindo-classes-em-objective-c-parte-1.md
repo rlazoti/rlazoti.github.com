@@ -19,14 +19,8 @@ tags:
 
 Assim como outras linguagens de programação, a linguagem Objective-C também suporta o o desenvolvimento utilizando orientação a objetos. Em Objective-C, as classes são definidas em duas partes:
 
-
-
-	
-  * Uma interface que declara os métodos, variáveis de instância da classe e sua superclasse.
-
-	
+  * Uma interface que declara os métodos, variáveis de instância da classe e sua superclasse.	
   * Uma implementação que realmente define a classe (contém o código que implementa os seus métodos).
-
 
 Essas duas partes são geralmente divididas em dois arquivos, no entanto, uma definição de classe pode abranger vários arquivos através da utilização de um recurso chamado de "category" (Category serve para que uma classe já implementada possa receber novos métodos, algo parecido com subclasses).
 

@@ -25,5 +25,19 @@ The link to download the VM is [ http://www.ausgamers.com/news/read/2816103](htt
 
 I made a video showing how to use the VM in Virtual Box.
 
+<div id="ytplayer"></div>
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-[youtube g5my_CyRuKc]
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '390',
+      width: '640',
+      videoId: 'g5my_CyRuKc'
+    });
+  }
+</script>

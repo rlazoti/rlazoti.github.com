@@ -23,14 +23,12 @@ O exemplo que irei criar está representado no driagrama UML a seguir:
 
 Agora vamos ao código, irei começar criando a interface Cryptography.java
 
-<!-- more -->
-
 {% highlight java linenos %}
 import java.security.NoSuchAlgorithmException;
 
 public interface Cryptography {
 
-String encrypt(String value) throws NoSuchAlgorithmException;
+  String encrypt(String value) throws NoSuchAlgorithmException;
 
 }
 {% endhighlight %}
@@ -45,30 +43,28 @@ import sun.misc.BASE64Encoder;
 
 public abstract class CryptographyGeneric {
 
-private MessageDigest messageDigest;
-private BASE64Encoder encoder;
+  private MessageDigest messageDigest;
+  private BASE64Encoder encoder;
 
-protected void useAlgorithm(String algorithm) throws NoSuchAlgorithmException {
-if (messageDigest == null || messageDigest.getAlgorithm() != algorithm) {
-messageDigest = MessageDigest.getInstance(algorithm);
-}
+  protected void useAlgorithm(String algorithm) throws NoSuchAlgorithmException {
+    if (messageDigest == null || messageDigest.getAlgorithm() != algorithm) {
+      messageDigest = MessageDigest.getInstance(algorithm);
+    }
 
-if (encoder == null) {
-encoder = new BASE64Encoder();
-}
-}
+    if (encoder == null) {
+      encoder = new BASE64Encoder();
+    }
+  }
 
-protected String encryptByAlgorithm(String algorithm, String value)
-throws NoSuchAlgorithmException {
+  protected String encryptByAlgorithm(String algorithm, String value) throws NoSuchAlgorithmException {
+    if (value == null) {
+      throw new IllegalArgumentException("The value is null.");
+    }
 
-if (value == null) {
-throw new IllegalArgumentException("The value is null.");
-}
-
-useAlgorithm(algorithm);
-byte[] hash = messageDigest.digest(value.getBytes());
-return encoder.encode(hash);
-}
+    useAlgorithm(algorithm);
+    byte[] hash = messageDigest.digest(value.getBytes());
+    return encoder.encode(hash);
+  }
 }
 {% endhighlight %}
 
@@ -80,9 +76,9 @@ import java.security.NoSuchAlgorithmException;
 
 public class CryptographyMD5 extends CryptographyGeneric implements Cryptography {
 
-public String encrypt(String value) throws NoSuchAlgorithmException {
-return encryptByAlgorithm("MD5", value);
-}
+  public String encrypt(String value) throws NoSuchAlgorithmException {
+    return encryptByAlgorithm("MD5", value);
+  }
 
 }
 {% endhighlight %}
@@ -93,9 +89,9 @@ import java.security.NoSuchAlgorithmException;
 
 public class CryptographySHA256 extends CryptographyGeneric implements Cryptography {
 
-public String encrypt(String value) throws NoSuchAlgorithmException {
-return encryptByAlgorithm("SHA-256", value);
-}
+  public String encrypt(String value) throws NoSuchAlgorithmException {
+    return encryptByAlgorithm("SHA-256", value);
+  }
 
 }
 {% endhighlight %}
@@ -106,9 +102,9 @@ import java.security.NoSuchAlgorithmException;
 
 public class CryptographySHA512 extends CryptographyGeneric implements Cryptography {
 
-public String encrypt(String value) throws NoSuchAlgorithmException {
-return encryptByAlgorithm("SHA-512", value);
-}
+  public String encrypt(String value) throws NoSuchAlgorithmException {
+    return encryptByAlgorithm("SHA-512", value);
+  }
 
 }
 {% endhighlight %}
@@ -120,25 +116,28 @@ Vamos realizar alguns testes:
 {% highlight java linenos %}
 public static void main(String[] args) throws NoSuchAlgorithmException {
 
-Cryptography cryptography;
+  Cryptography cryptography;
 
-//Criptografia usando MD5
-cryptography = new CryptographyMD5();
-System.out.println("MD5: " + cryptography.encrypt("Java Cryptography Architecture"));
+  //Criptografia usando MD5
+  cryptography = new CryptographyMD5();
+  System.out.println("MD5: " + cryptography.encrypt("Java Cryptography Architecture"));
 
-//Criptografia usando SHA-256
-cryptography = new CryptographySHA256();
-System.out.println("SHA-256: " + cryptography.encrypt("Java Cryptography Architecture"));
+  //Criptografia usando SHA-256
+  cryptography = new CryptographySHA256();
+  System.out.println("SHA-256: " + cryptography.encrypt("Java Cryptography Architecture"));
 
-//Criptografia usando SHA-512
-cryptography = new CryptographySHA512();
-System.out.println("SHA-512: " + cryptography.encrypt("Java Cryptography Architecture"));
+  //Criptografia usando SHA-512
+  cryptography = new CryptographySHA512();
+  System.out.println("SHA-512: " + cryptography.encrypt("Java Cryptography Architecture"));
+
 }
 {% endhighlight %}
 
 O resultado desse teste será:
 
+{% highlight console linenos %}
 MD5: cJL5LHVk/rjt0HYpNoi/1g==
 SHA-256: OtvmRxbTc7fp3SnfSKTgXVi81Gvp7+QPl1B4aCvLU48=
 SHA-512: YSsyP2VOGxlwcX873AxlVGqTX4DsJE6XOBTQkjjX4M2zhrMChnohHIejLe1W7RRrfvfMMODiMBou
 LqOXHXknig==
+{% endhighlight %}

@@ -41,27 +41,27 @@ import javax.servlet.http.HttpSession;
 
 public class AuthorizationListener implements PhaseListener {
 
-public void afterPhase(PhaseEvent event) {
+  public void afterPhase(PhaseEvent event) {
 
-FacesContext facesContext = event.getFacesContext();
-String currentPage = facesContext.getViewRoot().getViewId();
+    FacesContext facesContext = event.getFacesContext();
+    String currentPage = facesContext.getViewRoot().getViewId();
 
-boolean isLoginPage = (currentPage.lastIndexOf("login.jsf") > -1);
-HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
-Object currentUser = session.getAttribute("currentUser");
+    boolean isLoginPage = (currentPage.lastIndexOf("login.jsf") > -1);
+    HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
+    Object currentUser = session.getAttribute("currentUser");
 
-if (!isLoginPage && currentUser == null) {
-NavigationHandler nh = facesContext.getApplication().getNavigationHandler();
-nh.handleNavigation(facesContext, null, "loginPage");
-}
-}
+    if (!isLoginPage && currentUser == null) {
+      NavigationHandler nh = facesContext.getApplication().getNavigationHandler();
+      nh.handleNavigation(facesContext, null, "loginPage");
+    }
+  }
 
-public void beforePhase(PhaseEvent event) {
-}
+  public void beforePhase(PhaseEvent event) {
+  }
 
-public PhaseId getPhaseId() {
-return PhaseId.RESTORE_VIEW;
-}
+  public PhaseId getPhaseId() {
+    return PhaseId.RESTORE_VIEW;
+  }
 
 }
 {% endhighlight %}
@@ -70,18 +70,18 @@ Note que o redirecionamento é feito por uma navegação configurada no arquivo 
 
 {% highlight xml linenos %}
 <navigation-rule>
-<from-view-id>/*</from-view-id>
-<navigation-case>
-<from-outcome>loginPage</from-outcome>
-<to-view-id>/login.xhtml</to-view-id>
-</navigation-case>
+  <from-view-id>/*</from-view-id>
+  <navigation-case>
+    <from-outcome>loginPage</from-outcome>
+    <to-view-id>/login.xhtml</to-view-id>
+  </navigation-case>
 </navigation-rule>
 {% endhighlight %}
 
 Também deve-se incluir o listener no _faces-config.xml_:
 {% highlight xml linenos %}
 <lifecycle>
-<phase-listener>com.rodrigolazoti.filter.AuthorizationListener</phase-listener>
+  <phase-listener>com.rodrigolazoti.filter.AuthorizationListener</phase-listener>
 </lifecycle>
 {% endhighlight %}
 
