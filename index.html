@@ -5,7 +5,7 @@ title: "Posts"
 
 <section class="content">
   <ul class="nav">
-  {% for post in site.posts limit:6 %}
+  {% for post in site.posts limit:4 %}
     <li class="featured">
       <a href="{{ post.url }}">
         <i class="icn-{{ post.image }}"></i>  
@@ -17,7 +17,7 @@ title: "Posts"
   </ul>
 
   <ul class="listing">
-    {% for post in site.posts offset:6 %}
+    {% for post in site.posts offset:4 %}
     <li>
       <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
