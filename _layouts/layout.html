@@ -32,29 +32,53 @@
 
     <section class="name">
       <a href="/">
-        <span id="fname">{{ site.name|split:' '|first }}</span>
-        <span id="lname">{{ site.name|split:' '|last }}</span>
+        <span id="fname">{{ site.name }}</span>
       </a>
+      <br/>
+      <span id="lname">{{ site.description }}</span>
     </section>
 
     <section class="meta">
       <a href="https://github.com/{{ site.github }}" target="_blank"><img src="/images/github.png" /></a>
-      <a href="https://twitter.com/{{ site.twitter }}" target="_blank"><img src="/images/twitter.png"></a>
       <a href="https://facebook.com/{{ site.facebook }}" target="_blank"><img src="/images/facebook.png"></a>
+      <a href="https://twitter.com/{{ site.twitter }}" target="_blank"><img src="/images/twitter.png"></a>
+      
+      <a href="https://plus.google.com/{{ site.google_plus }}" target="_blank"><img src="/images/googleplus.png"></a>
       <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank"><img src="/images/linkedin.png"></a>
+      <a href="https://itunes.apple.com/app/{{ site.apps_tore }}" target="_blank"><img src="/images/appstore.png"></a>
+      
+      <a href="https://foursquare.com/{{ site.foursquare }}" target="_blank"><img src="/images/foursquare.png"></a>
+      <a href="http://instagram.com/{{ site.instagram }}" target="_blank"><img src="/images/instagram.png"></a>
       <a href="/atom.xml"><img src="/images/rss.png" /></a>
     </section>
 
     <section class="sections">
+      <h3>Blog</h3>
       <ul>
+        <li><a href="/">Home</a></li>
         <li><a href="/about.html">About</a></li>
-        <li><a href="/">Posts</a></li>
-        <li><a href="/">iOS Apps</a></li>
       </ul>
     </section>
+
+    <section class="sections">
+      <h3>iOS apps</h3>
+      <ul>
+        <li><a href="/">Mememize!</a></li>
+        <li><a href="/">Mememize! HD</a></li>
+        <li><a href="/">MeuVale</a></li>
+        <li><a href="/">Sketch Photo</a></li>
+        <li><a href="/">iSpeedLight</a></li>
+        <li><a href="/">iPwdGen</a></li>
+      </ul>
+    </section>
+
   </section>
 
   {{ content }}
+
+  <footer>
+    <p>{{ site.name }} - {{ site.description }}. Source on <a href="https://github.com/rlazoti/rlazoti.github.com">GitHub</a> and <a href="/atom.xml">RSS feed</a>.</p>
+  </footer>
 
   <script type="text/javascript" src="/js/application.js"></script>  
 </body>

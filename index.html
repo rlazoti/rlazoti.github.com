@@ -4,8 +4,20 @@ title: "Posts"
 ---
 
 <section class="content">
+  <ul class="nav">
+  {% for post in site.posts limit:6 %}
+    <li class="featured">
+      <a href="{{ post.url }}">
+        <i class="icn-{{ post.image }}"></i>  
+        <p>{{ post.title }}</p>
+        <aside>{{ post.date | date: "%d %B %Y" }}</aside>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+
   <ul class="listing">
-    {% for post in site.posts %}
+    {% for post in site.posts offset:6 %}
     <li>
       <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
