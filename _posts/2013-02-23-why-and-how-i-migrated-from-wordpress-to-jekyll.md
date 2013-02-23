@@ -4,6 +4,11 @@ date: 2013-02-23 14:46:11
 layout: post
 slug: why-and-how-i-migrated-from-wordpress-to-jekyll
 title: Why and how I migrated from Wordpress to Jekyll
+categories:
+- wordpress
+- jekyll
+- ruby
+- github
 tags:
 - wordpress
 - jekyll
