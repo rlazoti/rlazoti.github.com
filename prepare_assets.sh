@@ -1,6 +1,6 @@
 bundle install
-juicer install yui_compressor
-juicer install closure_compiler
 juicer install jslint
-juicer merge css/base.css css/pygments.css -o css/base.min.css --force --document-root .
-juicer merge css/main.css css/normalize.css  -o css/normalize.min.css --force --document-root .
+juicer merge css/base.css      -o css/base.min.css      --force --document-root .
+juicer merge css/pygments.css  -o css/pygments.min.css  --force --document-root .
+juicer merge css/normalize.css -o css/normalize.min.css --force --document-root .
+juicer merge css/main.css      -o css/main.min.css      --force --document-root .
