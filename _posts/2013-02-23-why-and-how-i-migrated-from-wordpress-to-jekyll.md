@@ -41,7 +41,7 @@ Ultimately I had to look for a new theme, I found the <a href="https://github.co
 
 ##Hosting on Github Pages
 Well, hosting static content in <a href="http://pages.github.com" target="_blank">Github Pages</a> is a piece of cake and it's completely free.
-I just had to create a new repository there and send (git push) my files to it. It's super easy! :)
+I just had to create a <a href="https://github.com/rlazoti/rlazoti.github.com" target="_blank">new repository</a> there and send (git push) my files to it. It's super easy! :)
 
 I've used the pages below to understand how to use Jekyll with Github Pages and how to set up my own domain.
 
