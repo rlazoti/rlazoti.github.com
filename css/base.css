@@ -410,3 +410,18 @@ footer p {
 .social-buttons .twitter-share, .social-buttons .linkedin-share, .social-buttons .facebook-like, .social-buttons .googleplus-one {
   width: 75px;
 }
+
+.social { 
+  background: url('/images/social.png') no-repeat top left;
+  margin: 2px;
+  display: inline-block;
+}
+
+.social.app_facebook { background-position: 0px 0px; width: 30px; height: 30px;  } 
+.social.app_foursquare { background-position: 0px -35px; width: 30px; height: 30px;  } 
+.social.app_github { background-position: 0px -70px; width: 30px; height: 29px;  } 
+.social.app_googleplus { background-position: 0px -104px; width: 30px; height: 29px;  } 
+.social.app_instagram { background-position: 0px -138px; width: 30px; height: 29px;  } 
+.social.app_linkedin { background-position: 0px -172px; width: 29px; height: 30px;  } 
+.social.app_rss { background-position: 0px -207px; width: 30px; height: 29px;  } 
+.social.app_twitter { background-position: 0px -241px; width: 30px; height: 30px;  } 
