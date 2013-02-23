@@ -16,9 +16,9 @@ tags:
 - github
 ---
 
-Since I started writing this blog I've always used <a href="http://wordpress.org/" target="_blank">Wordpress</a> and it's great, but something that always annoyed me was the need to update Wordpress and its plugins (a lot of them).
+Since I started writing this blog I've always used <a href="http://wordpress.org/" target="_blank">Wordpress</a> and it's great, but the need to update Wordpress and its plug ins (a lot of them) always annoyed me.
 
-Even I don't have much more time to write here I always wanted to write again. After I decided to write back, I also dediced to improve my blog, with a new theme and a better and fun way to write posts.
+Even I don't have much more time to write here I always wanted to write again. After I decided to write back, I also decided to improve my blog, with a new theme and a better and fun way to write posts.
 
 ##My choice and why
 I chose to migrate this blog from Wordpress to <a href="http://jekyllrb.org/" target="_blank">Jekyll</a>. But why Jekyll?
@@ -33,9 +33,9 @@ More reasons why I choose Jekyll were:
 * Posts can be written in Markdown (Goodbye TinyMCE editor)
 
 ##How moving into Jekyll
-First thing I did was install the <a href="http://www.wordpress.org/extend/plugins/disqus-comment-system/" target="_blank">Disqus plugin</a> and migrate all comments into it, this allowed me to keep my comment history and use them easily into Jekyll.
+First thing I did was install the <a href="http://www.wordpress.org/extend/plugins/disqus-comment-system/" target="_blank">Disqus plug in</a> and migrate all comments into it, this allowed me to keep my comment history and use them easily into Jekyll.
 
-Second I expoted all my blog in a XML file and used <a href="https://github.com/thomasf/exitwp" target="_blank">Exitwp tool</a> to convert my wordpress blog to jekyll. I had only to modify the image url in all posts and change syntax highlighting tag used in wordpress for liquid tag (pygments).
+Second I exported all my blog in a XML file and used <a href="https://github.com/thomasf/exitwp" target="_blank">Exitwp tool</a> to convert my wordpress blog to jekyll. I had only to modify the image url in all posts and change syntax highlighting tag used in wordpress for liquid tag (pygments).
 
 Ultimately I had to look for a new theme, I found the <a href="https://github.com/holman/left" target="_blank">Left theme</a> for Jekyll develop by <a href="http://zachholman.com" target="_blank">Zach Holman</a> so I decided to use it as a base for my own new theme.
 
