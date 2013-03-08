@@ -114,7 +114,7 @@ object App extends App {
 
 ##Conclusion
 
-From now on you can execute **mvn package** to build your project or **mvn test** to test your project, and the Scala code will get built.
+From now on you can execute **mvn package** to build your project or **mvn test** to test your project, and the Scala code will get built automatically. ;)
 
 See below the complete project’s pom file:
 
