@@ -442,7 +442,11 @@
         <loc>
             http://www.rodrigolazoti.com.br/2013/02/23/why-and-how-i-migrated-from-wordpress-to-jekyll
         </loc>
-        <lastmod>2013-02-23T19:59:16-03:00</lastmod>
+        <lastmod>2013-02-27T20:45:34-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.rodrigolazoti.com.br/2013/03/07/getting-started-with-maven-and-scala</loc>
+        <lastmod>2013-03-07T22:20:48-03:00</lastmod>
     </url>
     <url>
         <loc>http://www.rodrigolazoti.com.br/404.html</loc>
@@ -450,14 +454,14 @@
     </url>
     <url>
         <loc>http://www.rodrigolazoti.com.br/about-me.html</loc>
-        <lastmod>2013-02-23T19:59:16-03:00</lastmod>
+        <lastmod>2013-03-07T22:20:48-03:00</lastmod>
     </url>
     <url>
         <loc>http://www.rodrigolazoti.com.br/</loc>
-        <lastmod>2013-02-23T19:59:16-03:00</lastmod>
+        <lastmod>2013-03-07T22:20:48-03:00</lastmod>
     </url>
     <url>
         <loc>http://www.rodrigolazoti.com.br/ios-apps.html</loc>
-        <lastmod>2013-02-23T19:59:16-03:00</lastmod>
+        <lastmod>2013-03-07T22:20:48-03:00</lastmod>
     </url>
 </urlset>
