@@ -13,54 +13,52 @@
   <meta name="author" content="{{ site.name }}" />
   <meta name="description" content="{{ site.description }}" />
   <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
-  <link rel="stylesheet" href="/css/app.min.css" type="text/css" media="screen, projection" />
-  <link media="only screen and (max-device-width: 480px)" href="/css/iphone.min.css" type="text/css" rel="stylesheet" />
-  <link media="only screen and (device-width: 768px)" href="/css/iphone.min.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/app.css" type="text/css" media="screen, projection" />
   <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
 </head>
 
 <body>
-  <section class="sidebar">
-    <a href="/">
-      <img src="{{ site.gravatar_url }}?s=75" height="75" width="75" class="avatar" />
-    </a>
+  <div class="container">
+    <header>
+      <section class="sidebar">
+        <a href="/">
+          <span id="fname">{{ site.name }}</span>
+        </a>
+        <br/>
+        <span id="lname">{{ site.description }}</span>
+      </section>
 
-    <section class="name">
-      <a href="/">
-        <span id="fname">{{ site.name }}</span>
-      </a>
-      <br/>
-      <span id="lname">{{ site.description }}</span>
+      <nav>
+        <ul>
+          <li><a href="/">Posts</a></li>
+          <li><a href="/ios-apps.html">iOS apps</a></li>
+          <li><a href="/about-me.html">About Me</a></li>
+        </ul>
+      </nav>
+
+      <section class="meta">
+        <a href="https://github.com/{{ site.github }}" target="_blank"><div class="social app_github"></div></a>
+        <a href="https://facebook.com/{{ site.facebook }}" target="_blank"><div class="social app_facebook"></div></a>
+        <a href="https://twitter.com/{{ site.twitter }}" target="_blank"><div class="social app_twitter"></div></a>
+        <a href="https://plus.google.com/{{ site.google_plus }}" target="_blank"><div class="social app_googleplus"></div></a>
+        <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank"><div class="social app_linkedin"></div></a>
+        <a href="https://foursquare.com/{{ site.foursquare }}" target="_blank"><div class="social app_foursquare"></div></a>
+        <a href="http://instagram.com/{{ site.instagram }}" target="_blank"><div class="social app_instagram"></div></a>
+        <a href="/atom.xml" target="_blank"><div class="social app_rss"></div></a>
+      </section>
+    </header>
+
+    <section class="content">
+      <article>
+        {{ content }}
+      </article>
     </section>
 
-    <section class="meta">
-      <a href="https://github.com/{{ site.github }}" target="_blank"><div class="social app_github"></div></a>
-      <a href="https://facebook.com/{{ site.facebook }}" target="_blank"><div class="social app_facebook"></div></a>
-      <a href="https://twitter.com/{{ site.twitter }}" target="_blank"><div class="social app_twitter"></div></a>
-      <a href="https://plus.google.com/{{ site.google_plus }}" target="_blank"><div class="social app_googleplus"></div></a>
-      <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank"><div class="social app_linkedin"></div></a>      
-      <a href="https://foursquare.com/{{ site.foursquare }}" target="_blank"><div class="social app_foursquare"></div></a>
-      <a href="http://instagram.com/{{ site.instagram }}" target="_blank"><div class="social app_instagram"></div></a>
-      <a href="/atom.xml" target="_blank"><div class="social app_rss"></div></a>
-    </section>
+    <footer>
+      <p>{{ site.name }} - {{ site.description }}. Source on <a href="https://github.com/rlazoti/rlazoti.github.com">GitHub</a> and <a href="/atom.xml">RSS feed</a>.</p>
+    </footer>
+  </div>
 
-    <section class="sections">
-      <h3>Blog</h3>
-      <ul>
-        <li><a href="/">Posts</a></li>
-        <li><a href="/ios-apps.html">iOS apps</a></li>
-        <li><a href="/about-me.html">About Me</a></li>
-      </ul>
-    </section>
-
-  </section>
-
-  {{ content }}
-
-  <footer>
-    <p>{{ site.name }} - {{ site.description }}. Source on <a href="https://github.com/rlazoti/rlazoti.github.com">GitHub</a> and <a href="/atom.xml">RSS feed</a>.</p>
-  </footer>
-  
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-4517380-1']);
