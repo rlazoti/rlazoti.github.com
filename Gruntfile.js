@@ -22,17 +22,9 @@ module.exports = function(grunt) {
     },
     development: {
       files: {
-        "assets/css/style.css": "assets/less/style.less"
+        "assets/css/site.css": "assets/less/site.less"
       }
     }
-    // ,production: {
-    //   options: {
-    //     paths: ["assets/less"],
-    //     yuicompress: true
-    //   },
-    //   files: {
-    //   }
-    // }
   };
 
   grunt.initConfig(config);

@@ -13,7 +13,7 @@
   <meta name="author" content="{{ site.name }}" />
   <meta name="description" content="{{ site.description }}" />
   <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
-  <link rel="stylesheet" href="/assets/css/app.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/assets/css/site.css" type="text/css" media="screen, projection" />
   <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
 </head>
 
@@ -21,17 +21,14 @@
   <div class="container">
     <header>
       <section class="sidebar">
-        <a href="/">
-          <span id="fname">{{ site.name }}</span>
-        </a>
-        <br/>
-        <span id="lname">{{ site.description }}</span>
+        <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+        <h3 class="description">{{ site.description }}</h3>
       </section>
 
       <nav>
         <ul>
-          <li><a href="/">Posts</a></li>
-          <li><a href="/ios-apps.html">iOS apps</a></li>
+          <li><a href="/">All Posts</a></li>
+          <li><a href="/ios-apps.html">iOS Apps</a></li>
           <li><a href="/about-me.html">About Me</a></li>
         </ul>
       </nav>

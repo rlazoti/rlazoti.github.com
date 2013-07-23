@@ -1,0 +1,61 @@
+body {
+  background-image: url(/images/background.png);
+  background-repeat: repeat;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 760px;
+  margin: 0 auto;
+}
+.container .sidebar .title,
+.container .sidebar .description {
+  text-align: center;
+  width: 100%;
+}
+nav {
+  width: 100%;
+}
+nav ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+nav ul li {
+  display: inline;
+}
+.meta {
+  text-align: center;
+  width: 100%;
+}
+.social {
+  background: url('/images/social.png') no-repeat top left;
+  margin: 2px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.app_facebook {
+  background-position: 0px 0px;
+}
+.app_foursquare {
+  background-position: 0px -35px;
+}
+.app_github {
+  background-position: 0px -70px;
+}
+.app_googleplus {
+  background-position: 0px -104px;
+}
+.app_instagram {
+  background-position: 0px -138px;
+}
+.app_linkedin {
+  background-position: 0px -172px;
+}
+.app_rss {
+  background-position: 0px -207px;
+}
+.app_twitter {
+  background-position: 0px -241px;
+}
