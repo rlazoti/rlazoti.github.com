@@ -15,6 +15,7 @@ body {
 }
 nav {
   width: 100%;
+  text-align: center;
 }
 nav ul {
   padding: 0px;
@@ -58,4 +59,37 @@ nav ul li {
 }
 .app_twitter {
   background-position: 0px -241px;
+}
+.content .posts {
+  padding: 0px;
+  width: 100%;
+}
+.content .posts .featured {
+  list-style: none;
+  width: 322px;
+  height: 176px;
+  float: left;
+  margin-bottom: 90px;
+  margin-right: 25px;
+  margin-left: 25px;
+  padding: 0px;
+  font-family: Helvetica, sans-serif;
+}
+.content .posts .featured a {
+  font-size: 13px;
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+}
+.content .posts .featured a:hover {
+  text-decoration: underline;
+}
+.content .posts .featured a img {
+  border: 8px solid #fff;
+  padding: 0px;
+}
+.content .posts .featured span {
+  font-size: 13px;
+  color: #777777;
+  display: block;
 }
