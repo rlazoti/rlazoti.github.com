@@ -1,33 +1,136 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
 body {
   background-image: url(/images/background.png);
   background-repeat: repeat;
   margin: 0;
   padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-top: 5px solid #000;
+  width: 100%;
+}
+a,
+a:hover,
+a:active,
+a:visited,
+a:link {
+  color: #000000;
 }
 .container {
   width: 760px;
   margin: 0 auto;
+  background-color: #ffffff;
+  padding: 0px 10px 5px 10px;
+}
+.container header {
+  margin-bottom: 50px;
+}
+.container .sidebar {
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 .container .sidebar .title,
 .container .sidebar .description {
   text-align: center;
   width: 100%;
+  padding: 0px;
+}
+.container .sidebar .description {
+  font-family: 'Vollkorn', sans-serif;
+  color: #444;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 22px;
+  margin: 0px;
+}
+.container .sidebar .title {
+  font-size: 42px;
+  margin: 15px 0px 15px 0px;
+  text-shadow: 2px 2px 6px #888;
+}
+.container .sidebar .title a {
+  padding: 10px;
+}
+.container .sidebar .title a:hover,
+.container .sidebar .title a:active,
+.container .sidebar .title a:visited,
+.container .sidebar .title a:link {
+  color: #000;
+  text-decoration: none;
+}
+.container .sidebar .title img.avatar {
+  border-radius: 5px;
+  vertical-align: middle;
+  box-shadow: 2px 2px 6px #888;
 }
 nav {
   width: 100%;
   text-align: center;
 }
 nav ul {
-  padding: 0px;
-  margin: 0px;
-  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 15px;
+  padding: 4px 25px;
+  background-color: #000000;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+  *zoom: 1;
 }
-nav ul li {
-  display: inline;
+nav ul:before,
+nav ul:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+nav ul:after {
+  clear: both;
+}
+nav li {
+  display: block;
+  float: left;
+  list-style: none;
+  padding: 6px 15px;
+  text-align: center;
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid #000000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+nav li:hover {
+  border: 1px solid #ffffff;
+  border-bottom: 1px solid #808080;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+nav li a:hover,
+nav li a:active,
+nav li a:visited,
+nav li a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+nav a {
+  color: #ffffff;
 }
 .meta {
   text-align: center;
   width: 100%;
+  padding-bottom: 25px;
 }
 .social {
   background: url('/images/social.png') no-repeat top left;
@@ -69,11 +172,10 @@ nav ul li {
   width: 322px;
   height: 176px;
   float: left;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
   margin-right: 25px;
   margin-left: 25px;
   padding: 0px;
-  font-family: Helvetica, sans-serif;
 }
 .content .posts .featured a {
   font-size: 13px;
@@ -92,4 +194,73 @@ nav ul li {
   font-size: 13px;
   color: #777777;
   display: block;
+}
+.post-title {
+  font-family: 'Vollkorn', sans-serif;
+  font-style: italic;
+  font-size: 68px;
+  font-weight: normal;
+  letter-spacing: -3px;
+  padding: 0px;
+  margin: 0px 0px 15px 0px;
+}
+.post-title a {
+  color: #000000;
+}
+.post-title a:hover,
+.post-title a:active,
+.post-title a:visited,
+.post-title a:link {
+  text-decoration: none;
+}
+.cf:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.social-buttons {
+  display: block;
+  list-style: none;
+  padding: 0;
+  width: 50%;
+  margin: auto;
+}
+.social-buttons > li {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  float: left;
+}
+.social-buttons .socialite {
+  display: block;
+  position: relative;
+}
+.social-buttons .twitter-share,
+.social-buttons .linkedin-share,
+.social-buttons .facebook-like,
+.social-buttons .googleplus-one {
+  width: 75px;
+}
+.copy {
+  padding-top: 35px;
+}
+article {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+}
+.entry-tags {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  font-weight: normal;
+}
+.entry-tags a {
+  color: #666;
 }

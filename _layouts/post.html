@@ -2,35 +2,35 @@
 layout: layout
 ---
 
-<section class="content">
-  <h1>
-    <a href="{{ page.url }}">{{ page.title }}</a>
-  </h1>
+<span class="entry-tags">{% for tag in page.tags %}<a href="{{ site.url }}/tags.html#{{ tag | cgi_encode }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} &bull; {% endunless %}{% endfor %}</span>
 
-  <section class="byline">
-    {{ page.date | date: "%B %e, %Y" }}
+<h1 class="post-title">
+  <a href="{{ page.url }}">{{ page.title }}</a>
+</h1>
+
+<section class="byline">
+  <span class="entry-date"><i class="icon-calendar-empty"></i> {{ page.date | date: "%B %e, %Y" }}</span>
+</section>
+
+{{ content }}
+
+<section class="meta">
+  <section class="copy">
+    <h3>Comments, share, likes, links, and tweets</h3>
+    <ul class="social-buttons cf">
+      <li><a href="http://www.facebook.com/sharer.php?u={{site.url | UrlEncode}}{{page.url | UrlEncode}}&amp;t={{ page.title }}" class="socialite facebook-like" data-href="{{site.url}}{{page.url}}" data-send="false" data-layout="button_count" data-show-faces="false" rel="nofollow" target="_blank">Like</a></li>
+      <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url | UrlEncode}}{{page.url | UrlEncode}}&amp;title={{ page.title }}" class="socialite linkedin-share" data-url="{{site.url}}{{page.url}}" rel="nofollow" target="_blank">Share</a></li>
+      <li><a class="socialite twitter-share" href="http://twitter.com/share" data-url="{{ site.url }}{{ page.url }}" data-count="horizontal" data-via="{{ site.twitter }}">Tweet</a></li>
+      <li><a href="https://plus.google.com/share?url={{site.url | UrlEncode}}{{page.url | UrlEncode}}" class="socialite googleplus-one" data-size="medium" data-href="{{site.url}}{{page.url}}" rel="nofollow" target="_blank">Share</a></li>
+  </ul>
   </section>
 
-  {{ content }}
-
-  <section class="meta">
-    <section class="copy">
-      <h3>Share, links, and tweets</h3>
-      <ul class="social-buttons cf">
-        <li><a href="http://www.facebook.com/sharer.php?u={{site.url | UrlEncode}}{{page.url | UrlEncode}}&amp;t={{ page.title }}" class="socialite facebook-like" data-href="{{site.url}}{{page.url}}" data-send="false" data-layout="button_count" data-show-faces="false" rel="nofollow" target="_blank">Like</a></li>
-        <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url | UrlEncode}}{{page.url | UrlEncode}}&amp;title={{ page.title }}" class="socialite linkedin-share" data-url="{{site.url}}{{page.url}}" rel="nofollow" target="_blank">Share</a></li>
-        <li><a class="socialite twitter-share" href="http://twitter.com/share" data-url="{{ site.url }}{{ page.url }}" data-count="horizontal" data-via="{{ site.twitter }}">Tweet</a></li>
-        <li><a href="https://plus.google.com/share?url={{site.url | UrlEncode}}{{page.url | UrlEncode}}" class="socialite googleplus-one" data-size="medium" data-href="{{site.url}}{{page.url}}" rel="nofollow" target="_blank">Share</a></li>
-    </ul>
-    </section>
-
-    <section class="comments">
-      <h3>Comments</h3>
-      <div id="disqus_thread"></div>
-      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </section>
+  <section class="comments">
+    <div id="disqus_thread"></div>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </section>
 </section>
+
 
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/socialite.min.js"></script>

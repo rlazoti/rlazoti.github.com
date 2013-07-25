@@ -3,12 +3,36 @@ nav {
   text-align: center;
 
   ul {
-    padding: 0px;
-    margin: 0px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 15px;
+    padding: 4px 25px;
+    background-color: @black;
+    .rounded(0 0 10px 10px);
+    .clearfix();
+  }
+  li {
+    display: block;
+    float: left;
     list-style: none;
-
-    li  {
-      display: inline;
+    padding: 6px 15px;
+    text-align: center;
+    .font-rem(14);
+    text-transform: uppercase;
+    color: @white;
+    border: 1px solid @black;
+    .rounded(4px);
+    &:hover {
+      border: 1px solid @white;
+      border-bottom: 1px solid lighten(@black,50);
+      border: 1px solid fade(@white,50);
     }
+    a:hover, a:active, a:visited, a:link {
+      text-decoration: none;
+      color: @white;
+    }
+  }
+  a {
+    color: @white;
   }
 }
