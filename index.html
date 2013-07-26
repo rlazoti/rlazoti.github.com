@@ -3,6 +3,10 @@ layout: layout
 title: "Rodrigo Lazoti Blog"
 ---
 
+<h1 class="post-title">
+  <a href="{{ page.url }}">Featured Posts</a>
+</h1>
+
 <ul class="posts">
 {% for post in site.posts limit:4 %}
   <li class="featured">
@@ -15,38 +19,6 @@ title: "Rodrigo Lazoti Blog"
 {% endfor %}
 </ul>
 
-<ul class="posts">
-  {% for post in site.posts offset:4 %}
-    {% if post.next %}
-      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-      {% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
-      {% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
-    {% endif %}
-
-    {% if forloop.first %}
-      <li>{{ post.date | date: '%Y - %B' }}
-        <ul>
-
-    {% elsif year != nyear %}
-        </ul>
-      </li>
-      <li>{{ post.date | date: '%Y - %B' }}
-        <ul>
-
-    {% elsif month != nmonth %}
-        </ul>
-      </li>
-      <li>{{ post.date | date: '%Y - %B' }}
-        <ul>
-
-    {% endif %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-
-    {% if forloop.last %}
-        </ul>
-      </li>
-    {% endif %}
-
-  {% endfor %}
-</ul>
+<div class="more-posts">
+  <h2><a href="posts.html">Blog Archives</a></h2>
+</div>

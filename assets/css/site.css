@@ -629,14 +629,63 @@ nav a {
 .app_twitter {
   background-position: 0px -241px;
 }
+.content .more-posts {
+  text-align: center;
+}
+.content .more-posts a,
+.content .more-posts a:active,
+.content .more-posts a:visited,
+.content .more-posts a:link {
+  text-decoration: none;
+  color: #227ddd;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.content .more-posts a:hover {
+  text-decoration: underline;
+}
+.content .all-posts {
+  padding-top: 30px;
+}
 .content .posts {
   padding: 0px;
   width: 100%;
 }
+.content .posts ul {
+  padding: 0px;
+}
+.content .posts .entry-post {
+  list-style: none;
+  text-transform: none;
+  padding-bottom: 30px;
+}
+.content .posts .entry-post .entry-post-title {
+  font-size: 20px;
+  color: #000000;
+}
+.content .posts .entry-post a,
+.content .posts .entry-post a:active,
+.content .posts .entry-post a:visited,
+.content .posts .entry-post a:link {
+  font-size: 14px;
+  text-decoration: none;
+  color: #227ddd;
+  padding-bottom: 10px;
+}
+.content .posts .entry-post a:hover {
+  text-decoration: underline;
+}
+.content .posts .month {
+  list-style: none;
+  text-transform: uppercase;
+  color: #AAA;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
 .content .posts .featured {
   list-style: none;
   width: 322px;
-  height: 176px;
+  height: 200px;
   float: left;
   margin-bottom: 100px;
   margin-right: 25px;
@@ -644,27 +693,30 @@ nav a {
   padding: 0px;
 }
 .content .posts .featured a {
-  font-size: 13px;
+  font-size: 20px;
   padding: 0px;
   margin: 0px;
   text-decoration: none;
+  color: #000000;
 }
 .content .posts .featured a:hover {
   text-decoration: underline;
+  color: #227ddd;
 }
 .content .posts .featured a img {
-  border: 8px solid #fff;
+  border: 8px solid #EEE;
   padding: 0px;
 }
 .content .posts .featured span {
-  font-size: 13px;
-  color: #777777;
+  font-size: 20px;
+  color: #AAA;
   display: block;
+  text-transform: uppercase;
 }
 .post-title {
   font-family: 'Vollkorn', sans-serif;
   font-style: italic;
-  font-size: 68px;
+  font-size: 50px;
   font-weight: normal;
   letter-spacing: -3px;
   padding: 0px;
