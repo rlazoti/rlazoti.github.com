@@ -18,4 +18,4 @@ instagram: rodrigolazoti
 disqus: rodrigolazotiblog
 gravatar_url: http://www.gravatar.com/avatar/d6cd131c2a59ae04ca2a41f9b6825b24.png
 
-exclude: [prepare_assets.sh, Gemfile, Gemfile.lock, .rvmrc]
+exclude: [prepare_assets.sh, Gemfile, Gemfile.lock, .rvmrc, package.json, Gruntfile.js]
