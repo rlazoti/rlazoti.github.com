@@ -1,49 +1,37 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-  <title>
-    {% if page.title %}{{ page.title }} &ndash; {% endif %}{{ site.name }}
-  </title>
-  <meta name="author" content="{{ site.name }}" />
-  <meta name="description" content="{{ site.description }}" />
-  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
-  <link rel="stylesheet" href="/assets/css/site.css" type="text/css" media="screen, projection" />
-
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Vollkorn:700italic,400italic,400,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
-</head>
-
-<body>
-  <div class="container">
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/posts.html">All Posts</a></li>
-        <li><a href="/ios-apps.html">iOS Apps</a></li>
-        <li><a href="/about-me.html">About Me</a></li>
-        <li><a href="/atom.xml">Feed RSS</a></li>
-      </ul>
-    </nav>
-
-    <header>
-      <section class="sidebar">
-        <h1 class="title">
-          <img src="{{ site.gravatar_url }}?s=75" height="75" width="75" class="avatar" />
-          <a href="/">
-            {{ site.name }}
-          </a>
-        </h1>
-        <h3 class="description">{{ site.description }}</h3>
-      </section>
-
-      <section class="meta">
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Rodrigo Lazoti" />
+    <meta name="disqus-identifier" content="{{ page.meta.dsq_thread_id }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css" />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,800|Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="alternate" href="/atom.xml" type="application/rss+xml" />
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>     
+      <a href="/">
+        <h4 class="logo">
+	  Rodrigo Lazoti's Blog
+	</h4>
+      </a>
+      <div class="menubutton"><i class="icon-reorder"></i></div>
+      <nav>
+        <ul>
+	  <li><a href="/posts.html">ALL POSTS</a></li>
+          <li><a href="/ios-apps.html">IOS APPS</a></li>
+          <li><a href="/about-me.html">ABOUT ME</a></li>
+        </ul>
+      </nav>
+      <br class="clear">
+      <div class="meta">
         <a href="https://github.com/{{ site.github }}" target="_blank"><div class="social app_github"></div></a>
         <a href="https://facebook.com/{{ site.facebook }}" target="_blank"><div class="social app_facebook"></div></a>
         <a href="https://twitter.com/{{ site.twitter }}" target="_blank"><div class="social app_twitter"></div></a>
@@ -52,31 +40,30 @@
         <a href="https://foursquare.com/{{ site.foursquare }}" target="_blank"><div class="social app_foursquare"></div></a>
         <a href="http://instagram.com/{{ site.instagram }}" target="_blank"><div class="social app_instagram"></div></a>
         <a href="/atom.xml" target="_blank"><div class="social app_rss"></div></a>
-      </section>
+      </div>
     </header>
 
-    <section class="content">
-      <article>
-        {{ content }}
-      </article>
-    </section>
+    {{ content }}
 
     <footer>
-      <p>{{ site.name }} - {{ site.description }}. Source on <a href="https://github.com/rlazoti/rlazoti.github.com">GitHub</a> and <a href="/atom.xml">RSS feed</a>.</p>
+      <div class="slate">
+        <div class="four columns">
+        </div>
+        <div class="four columns">
+        </div>
+      </div>
     </footer>
-  </div>
-
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-4517380-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-  <script type="text/javascript" src="/js/modernizr.min.js"></script>
-</body>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
+    <script src="/assets/js/app.min.js"></script>
+    <script type="text/javascript">
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-4517380-1']);
+     _gaq.push(['_trackPageview']);
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+    </script>
+  </body>
 </html>

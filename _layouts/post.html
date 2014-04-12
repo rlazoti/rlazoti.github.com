@@ -2,42 +2,38 @@
 layout: layout
 ---
 
-<h1 class="post-title">
-  <a href="{{ page.url }}">{{ page.title }}</a>
-</h1>
-
-<section class="byline">
-  <span class="entry-date">{{ page.date | date: "%B %e, %Y" }}</span>
-</section>
-
-{{ content }}
-
-<section class="meta">
-  <section class="copy">
-    <h3>Comments, share, likes, links, and tweets</h3>
-    <ul class="social-buttons cf">
-      <li><a href="http://www.facebook.com/sharer.php?u={{site.url | UrlEncode}}{{page.url | UrlEncode}}&amp;t={{ page.title }}" class="socialite facebook-like" data-href="{{site.url}}{{page.url}}" data-send="false" data-layout="button_count" data-show-faces="false" rel="nofollow" target="_blank">Like</a></li>
-      <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url | UrlEncode}}{{page.url | UrlEncode}}&amp;title={{ page.title }}" class="socialite linkedin-share" data-url="{{site.url}}{{page.url}}" rel="nofollow" target="_blank">Share</a></li>
-      <li><a class="socialite twitter-share" href="http://twitter.com/share" data-url="{{ site.url }}{{ page.url }}" data-count="horizontal" data-via="{{ site.twitter }}">Tweet</a></li>
-      <li><a href="https://plus.google.com/share?url={{site.url | UrlEncode}}{{page.url | UrlEncode}}" class="socialite googleplus-one" data-size="medium" data-href="{{site.url}}{{page.url}}" rel="nofollow" target="_blank">Share</a></li>
-  </ul>
-  </section>
-
-  <section class="comments">
+<section>
+  <div class="eight columns">
+    <h4 class="post_title">{{ page.title }}</h4>
+    <span class="post_date">
+      <time class="entry-date" datetime="{{page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d %B, %Y" }}</time>
+    </span>
+    {{ content }}
     <div id="disqus_thread"></div>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </section>
+  </div>
+  <br class="clear">
+
+  <script type="text/javascript">
+   var disqus_shortname = "{{ site.disqus }}";
+   (function() {
+     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+     dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  <!-- Google Analytics-->
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+   _gaq.push(['_setAccount', 'UA-35837060-1']);
+   _gaq.push(['_trackPageview']);
+
+   (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+  </script>
+
 </section>
-
-
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/socialite.min.js"></script>
-<script type="text/javascript">
-    var disqus_shortname = '{{ site.disqus }}';
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      Socialite.load();
-    })();
-</script>

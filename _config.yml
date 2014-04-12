@@ -2,8 +2,8 @@ markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:day/:title
 auto: true
-rdiscount:
-  extensions: [smart]
+rdiscount extensions: [smart]
+paginate: 5
 
 name: Rodrigo Lazoti
 url: http://rodrigolazoti.com.br
@@ -18,4 +18,4 @@ instagram: rodrigolazoti
 disqus: rodrigolazotiblog
 gravatar_url: http://www.gravatar.com/avatar/d6cd131c2a59ae04ca2a41f9b6825b24.png
 
-exclude: [prepare_assets.sh, Gemfile, Gemfile.lock, .rvmrc, package.json, Gruntfile.js]
+exclude: [build.sh, Gemfile, Gemfile.lock, package.json, Gruntfile.js, _assets]

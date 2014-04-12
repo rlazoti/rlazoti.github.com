@@ -45,7 +45,7 @@ So, let's use a pom.xml for a simple java application like this:
 
 Right, now let's set up the project’s pom file to adding support for Scala code.
 
-##Add scala-tools repository
+####Add scala-tools repository
 
 The Maven needs to know where to find the plugin and the Scala library, so add this repository to pom.xml:
 
@@ -58,7 +58,7 @@ The Maven needs to know where to find the plugin and the Scala library, so add t
 </repositories>
 {% endhighlight %}
 
-##Add scala library dependency
+####Add scala library dependency
 
 The scala's version that I'll use for this example is 2.10.0.
 
@@ -72,7 +72,7 @@ Add this dependency to pom.xml:
 </dependency>
 {% endhighlight %}
 
-##Add maven-scala-plugin
+####Add maven-scala-plugin
 
 Add the maven-scala-plugin to pom.xml:
 
@@ -98,7 +98,7 @@ Add the maven-scala-plugin to pom.xml:
 </build>
 {% endhighlight %}
 
-##Add some Scala code
+####Add some Scala code
 
 Let's add some scala code to the project.
 
@@ -112,7 +112,7 @@ object App extends App {
 }
 {% endhighlight %}
 
-##Conclusion
+####Conclusion
 
 From now on you can execute **mvn package** to build your project or **mvn test** to test your project, and the Scala code will get built automatically. ;)
 

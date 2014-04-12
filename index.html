@@ -1,24 +1,38 @@
 ---
 layout: layout
-title: "Rodrigo Lazoti Blog"
+title: Rodrigo Lazoti Blog
 ---
-
-<h1 class="post-title">
-  <a href="{{ page.url }}">Featured Posts</a>
-</h1>
-
-<ul class="posts">
-{% for post in site.posts limit:4 %}
-  <li class="featured">
-    <a href="{{ post.url }}">
-      <img src="/images/posters/{{ post.slug }}.png" alt="{{ post.title }}" />
-      {{ post.title }}
-    </a>
-    <span>{{ post.date | date: "%B %e, %Y" }}</span>
-  </li>
+{% for post in paginator.posts %}
+  <section>
+    <div class="eight columns">
+      <h4 class="post_title"><a href="{{post.url}}">{{ post.title }}</a></h4>
+      <span class="post_date">{{ post.date | date: "%d %B, %Y" }}</span>
+      {{ post.content }}
+      <p>
+        <a id="more" href="{{post.url}}#disqus_thread">Comments &raquo;</a>
+      </p>
+    </div>
+    <br class="clear">
+  </section>
 {% endfor %}
-</ul>
 
-<div class="more-posts">
-  <h2><a href="posts.html">Blog Archives</a></h2>
+<div class="pagination">
+  {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <a href="/" class="previous">
+        <button class="light"><i class="icon-chevron-left"></i></button>
+      {% else %}
+        <a href="/page{{paginator.previous_page}}" class="previous">
+        <button class="light"><i class="icon-chevron-left"></i></button>
+      {% endif %}
+    </a>
+  {% endif %}
+
+  <span class="page_number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
+
+  {% if paginator.next_page %}
+    <a href="/page{{paginator.next_page}}" class="next ">
+      <button class="light"><i class="icon-chevron-right"></i></button>
+    </a>
+  {% endif %}
 </div>
