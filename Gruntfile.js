@@ -19,10 +19,15 @@ module.exports = function(grunt) {
   config.clean = ["assets/css/", "assets/js/"];
 
   config.cssmin = {
+    combine: {
+      files: {
+	'_assets/css/app.css': ['_assets/css/style.css', '_assets/css/syntax.css', "_assets/css/font-awesome.css"]
+      }
+    },
     minify: {
       expand: true,
       cwd: '_assets/css/',
-      src: ['*.css', '!*.min.css'],
+      src: ['app.css', '!*.min.css'],
       dest: 'assets/css/',
       ext: '.min.css'
     }
