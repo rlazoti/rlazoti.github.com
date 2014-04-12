@@ -10,21 +10,13 @@ url: http://rodrigolazoti.com.br
 description: Blog about software development, technology, and cool stuff
 
 twitter: rodrigolazoti
-
-git_usr: rlazoti
-
 facebook: rodrigolazoti
-
 linkedin: rodrigolazoti
-
 google_plus: 111551725687201434613
-
 foursquare: rodrigolazoti
-
 instagram: rodrigolazoti
-
 disqus: rodrigolazotiblog
-
+userrepo: rlazoti
 gravatar_url: http://www.gravatar.com/avatar/d6cd131c2a59ae04ca2a41f9b6825b24.png
 
 exclude: [build.sh, Gemfile, Gemfile.lock, package.json, Gruntfile.js, _assets]
