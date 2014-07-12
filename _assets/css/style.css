@@ -332,6 +332,14 @@ header .logo {
     float: left;
 }
 
+header .logo:hover {
+		color: #f64;
+		webkit-transition: color .25s ease-in-out;
+		-moz-transition: color .25s ease-in-out;
+		-o-transition: color .25s ease-in-out;
+		transition: color .25s ease-in-out;
+}
+
 header nav {
     float: right;
     margin-top: 3px;
