@@ -18,19 +18,13 @@ title: "All Blog Posts"
     {% endif %}
 
     {% if forloop.first %}
-      <li class="month">{{ post.date | date: '%B/%Y' }}
+      <li class="month">{{ post.date | date: '%Y' }}
         <ul>
 
     {% elsif year != nyear %}
         </ul>
       </li>
-      <li class="month">{{ post.date | date: '%B/%Y' }}
-        <ul>
-
-    {% elsif month != nmonth %}
-        </ul>
-      </li>
-      <li class="month">{{ post.date | date: '%B/%Y' }}
+      <li class="month">{{ post.date | date: '%Y' }}
         <ul>
 
     {% endif %}
