@@ -333,11 +333,11 @@ header .logo {
 }
 
 header .logo:hover {
-		color: #f64;
-		webkit-transition: color .25s ease-in-out;
-		-moz-transition: color .25s ease-in-out;
-		-o-transition: color .25s ease-in-out;
-		transition: color .25s ease-in-out;
+    color: #f64;
+    webkit-transition: color .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out;
+    -o-transition: color .25s ease-in-out;
+    transition: color .25s ease-in-out;
 }
 
 header nav {
@@ -420,22 +420,37 @@ header .meta {
   margin-right: -10px;
 }
 
+@-webkit-keyframes pulse {
+  from {-webkit-transform: scale(0.9, 0.9); opacity: 0.5;}
+  to {-webkit-transform: scale(1.2, 1.2); opacity: 1.0;}
+}
+
+@-ms-keyframes pulse {
+  from {-ms-transform: scale(0.9, 0.9); opacity: 0.5;}
+  to {-ms-transform: scale(1.2, 1.2); opacity: 1.0;}
+}
+
+@keyframes pulse {
+  from { transform: scale(0.9, 0.9); opacity: 0.5; }
+  to { transform: scale(1.2, 1.2); opacity: 1.0; }
+}
+
 header .meta .social {
+  border-radius: 50%;
   background: url('/images/social.png') no-repeat top left;
   display: inline-block;
-  padding-right: 25px;
+  margin-right: 5px;
   display: inline-block;
-  width: 8px;
+  width: 30px;
   height: 30px;
   opacity: 0.5;
-  transition: all 0.5s ease;
 }
 
 header .meta .social:hover {
   opacity: 1.0;
-  transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
+  -webkit-animation: pulse .4s infinite alternate;
+  -moz-animation: pulse .4s infinite alternate;
+  -animation: pulse .4s infinite alternate;
 }
 
 header .meta .app_facebook {
@@ -532,17 +547,21 @@ section .post_date {
     transition:color .25s ease-in-out;
 }
 
-.content .posts .month {
+.content .posts .year {
     list-style: none;
     text-align: right;
     font-weight: bold;
     font-size: 22px;
-    color: #bbb;
+    color: #BBB;
     text-transform: uppercase;
     -webkit-transition:color .25s ease-in-out;
     -moz-transition:color .25s ease-in-out;
     -o-transition:color .25s ease-in-out;
     transition:color .25s ease-in-out;
+}
+
+.content .posts .year ul {
+  border-top: 2px dotted #BBB;
 }
 
 .content .posts {
@@ -557,13 +576,14 @@ section .post_date {
 .content .posts .entry-post {
     list-style: none;
     text-transform: none;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
+    padding-top: 15px;
     text-align: left;
 }
 
 .content .posts .entry-post .entry-post-title {
     font-size: 18px;
-    color: #000000;
+    color: #525252;
 }
 
 .content .posts .entry-post a,
