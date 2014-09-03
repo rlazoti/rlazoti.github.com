@@ -88,5 +88,5 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("default", ["jekyll:serve"]);
-  grunt.registerTask("build", ["clean", "cssmin", "uglify", "copy", "defineNextVersion", "gitcommit", "release"]);
+  grunt.registerTask("build", ["clean", "cssmin", "uglify", "defineNextVersion", "gitcommit", "release"]);
 };
