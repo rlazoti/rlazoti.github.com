@@ -45,6 +45,17 @@ module.exports = function(grunt) {
     }
   };
 
+  config.gitcommit = {
+    task: {
+      options: {
+        message: "[BUILD] Added modified files to the next release"
+      },
+      files: {
+        src: ["."]
+      }
+    }
+  };
+
   config.release = {
     options: {
       push: true,
@@ -78,5 +89,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask("build", ["clean", "cssmin", "uglify"]);
   grunt.registerTask("default", ["build", "jekyll:serve"]);
-  grunt.registerTask("release", ["build", "defineNextVersion", "release"]);
+  grunt.registerTask("publish", ["build", "defineNextVersion", "gitcommit", "release"]);
 };
