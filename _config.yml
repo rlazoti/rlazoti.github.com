@@ -1,9 +1,10 @@
 markdown: rdiscount
-pygments: true
+highlighter: pygments
 permalink: /:year/:month/:day/:title
-auto: true
 rdiscount extensions: [smart]
 paginate: 5
+gems:
+  - jekyll-sitemap
 
 name: Rodrigo Lazoti
 url: http://rodrigolazoti.com.br
@@ -19,4 +20,4 @@ disqus: rodrigolazotiblog
 userrepo: rlazoti
 gravatar_url: http://www.gravatar.com/avatar/d6cd131c2a59ae04ca2a41f9b6825b24.png
 
-exclude: [build.sh, Gemfile, Gemfile.lock, package.json, Gruntfile.js, _assets]
+exclude: [Gemfile, Gemfile.lock, package.json, Gruntfile.js, _assets]
