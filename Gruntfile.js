@@ -38,6 +38,9 @@ module.exports = function(grunt) {
   };
 
   config.uglify = {
+    options: {
+      banner: '/* version-<%= grunt.option("versionNumber") %> - <%= grunt.template.today("yyyy-mm-dd") %> */'
+    },
     dist: {
       files: {
         "assets/js/app.min.js": ["_assets/js/app.js"]
@@ -89,5 +92,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask("build", ["clean", "cssmin", "uglify"]);
   grunt.registerTask("default", ["build", "jekyll:serve"]);
-  grunt.registerTask("publish", ["build", "defineNextVersion", "gitcommit", "release"]);
+  grunt.registerTask("publish", ["defineNextVersion", "build", "gitcommit", "release"]);
 };
