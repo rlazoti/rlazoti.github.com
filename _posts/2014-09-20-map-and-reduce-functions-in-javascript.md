@@ -45,7 +45,7 @@ var map = function(list, transformFn) {
 };
 {% endhighlight %}
 
-See, It's not a big deal. It's be used the each function to replace each list value by the result of transform function.
+See, it's not a big deal. We use the **each function** to iterate over the list and replace each list value by the result of transform function.
 So how can we use it? Let's transform (multiply each value by 2) a simple array of numbers.
 
 {% highlight javascript %}
@@ -58,7 +58,7 @@ console.log(map(array, multiplyFn));
 //[2, 4, 6, 8, 10]
 {% endhighlight %}
 
-And now the last one function called **reduce**. Different from **map** function, this one returns only one value with a initial value predefined that is the result of a combine function executed recursively over each element of the list. See the following function:
+And now the last one function called **reduce**. Different from **map** function, this one returns only one value with an initial value predefined that is the result of a combine function executed recursively over each element of the list. See the following function:
 
 {% highlight javascript %}
 var reduce = function(list, initalValue, combineFn) {
