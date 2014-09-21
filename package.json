@@ -1,6 +1,6 @@
 {
   "name": "rodrigo-lazoti-blog",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "title": "My personal blog",
   "homepage": "http://rodrigolazoti.com.br",
   "devDependencies": {
