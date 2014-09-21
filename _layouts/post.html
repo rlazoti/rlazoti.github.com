@@ -6,7 +6,7 @@ layout: layout
   <div class="eight columns">
     <h4 class="post_title">{{ page.title }}</h4>
     <span class="post_date">
-      <time class="entry-date" datetime="{{page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d %B, %Y" }}</time>
+      <time class="entry-date" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d %B, %Y" }}</time>
     </span>
     {{ content }}
     <div id="disqus_thread"></div>
@@ -23,17 +23,4 @@ layout: layout
   </script>
   <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-  <!-- Google Analytics-->
-  <script type="text/javascript">
-   var _gaq = _gaq || [];
-   _gaq.push(['_setAccount', 'UA-35837060-1']);
-   _gaq.push(['_trackPageview']);
-
-   (function() {
-     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-   })();
-  </script>
-
 </section>
