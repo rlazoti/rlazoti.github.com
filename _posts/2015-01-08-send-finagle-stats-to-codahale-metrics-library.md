@@ -2,8 +2,8 @@
 comments: true
 date: 2015-01-08 22:00:00
 layout: post
-slug: send-finagle-metrics-to-codahale-metrics
-title: Send Finagle metrics to Codahale Metrics
+slug: send-finagle-stats-to-codahale-metrics
+title: Send Finagle stats to Codahale Metrics
 categories:
 - twitter
 - finagle
@@ -20,7 +20,7 @@ tags:
 
 Last year I needed to send lots of metrics from some java applications to <a href="http://graphite.wikidot.com/" target="_blank">Graphite</a>, and I did it easily using a library called <a href="https://github.com/dropwizard/metrics" target="_blank">Metrics</a>.
 
-Recently I had to send some metrics from a <a href="https://github.com/twitter/finagle" target="_blank">Finagle</a> based application (<a href="http://twitter.github.io/finagle/guide/Metrics.html" target="_blank">Finagle collect and expose some metrics automatically</a>) to the same Graphite server, so I had tried the same approach using the Metrics library, and as a result, I ended up doing a finagle module called <a href="https://github.com/rlazoti/finagle-metrics" target="_blank">**finagle-metrics**</a>.
+Recently I had to send some stats from a <a href="https://github.com/twitter/finagle" target="_blank">Finagle</a> based application (<a href="http://twitter.github.io/finagle/guide/Metrics.html" target="_blank">Finagle collect and expose some metrics automatically</a>) to the same Graphite server, so I had tried the same approach using the Metrics library, and as a result, I ended up doing a finagle module called <a href="https://github.com/rlazoti/finagle-metrics" target="_blank">**finagle-metrics**</a>.
 
 So let's see how to use it! :)
 
