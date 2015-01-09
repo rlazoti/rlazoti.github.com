@@ -109,6 +109,16 @@ a:hover {
     color: #ff6644;
 }
 
+p a, p a:visited,
+ul li a, ul li a:visited {
+    text-decoration: underline;
+}
+
+p a#more, p a#more:visited,
+nav ul li a, nav ul li a:visited {
+    text-decoration: none;
+}
+
 hr {
     width: 50%;
     height: 6px;
