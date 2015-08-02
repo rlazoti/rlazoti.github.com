@@ -10,6 +10,11 @@
 ==================================================*/
 
 
+.header {
+    background-repeat: no-repeat;
+    background-image: url("/images/header.png");
+}
+
 /* --------------------------------------------------------------
 CSS Reset
 -------------------------------------------------------------- */
@@ -327,9 +332,6 @@ Header
 header {
     width: auto;
     max-width: 860px;
-    margin: 0 auto;
-    margin-top: 80px;
-    margin-bottom: 60px;
     padding: 0 80px;
     position: relative;
     -webkit-box-sizing: border-box;     /* Safari/Chrome, other WebKit */
@@ -338,7 +340,7 @@ header {
 }
 
 header .logo {
-    color: #685F5F;
+    color: #000000;
     float: left;
 }
 
@@ -363,7 +365,7 @@ header nav ul li {
 header nav ul li a, header nav ul li a:visited, header nav ul li.search {
     font-size: 16px;
     font-weight: bold;
-    color: #5E5E5E;
+    color: #000000;
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
@@ -382,7 +384,7 @@ header nav ul li a:hover, header nav ul li.search:hover {
 header .menubutton {
     display: none;
     float: right;
-    color: #aaa28c;
+    color: #000000;
     cursor: pointer;
     font-size: 24px;
     line-height: 24px;
@@ -1007,6 +1009,10 @@ Twitter
 Media queries
 -------------------------------------------------------------- */
 @media only screen and (max-width: 767px) {
+    .header {
+        background-position-y: 0%;
+    }
+
     header, section, section.quote {
         padding: 20px;
         width: auto;
@@ -1063,11 +1069,6 @@ Media queries
         top: 10px;
     }
 
-    section, .post_image, .post_video {
-        /*margin-left: 20px;
-        margin-right: 20px;*/
-    }
-
     section {
         padding: 30px 0;
     }
@@ -1094,6 +1095,10 @@ Media queries
 }
 
 @media only screen and (min-width: 768px) {
+    .header {
+        background-position-y: 50%;
+    }
+
     header nav {
         display: block !important;
     }
