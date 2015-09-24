@@ -16,7 +16,7 @@ My personal blog [http://rodrigolazoti.com.br](http://rodrigolazoti.com.br)
 * Zepto
 
 
-## How to execute locally?
+## How do I execute it locally?
 
 Just type:
 
@@ -27,7 +27,7 @@ $ grunt
 Then use http://localhost:4000 to access the blog through your browser.
 
 
-## How easy is to build a new version?
+## How do I publish a new version?
 
 Type:
 
