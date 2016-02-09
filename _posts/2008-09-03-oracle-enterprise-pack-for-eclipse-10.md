@@ -1,4 +1,5 @@
 ---
+language: pt-br
 comments: true
 date: 2008-09-03 23:50:33
 layout: post
@@ -22,28 +23,28 @@ Segundo o [post](http://www.theserverside.com/news/thread.tss?thread_id=50485) n
 
 > 
 > 
-	
+  
 >   * Fastswap - Java Class Redefinition support for WebLogic Server
 > 
-	
+  
 >   * Develop, debug and deploy to Oracle WebLogic Server 10gR3, and multiple previous versions
 > 
-	
+  
 >   * Remote deployment and debugging, JSP Debugging for WebLogic Server 9.x and higher
 > 
-	
+  
 >   * Virtual EAR technology that improves WebLogic Server deployment performance for large applications
 > 
-	
+  
 >   * Leverage WebLogic Shared J2EE Libraries to make packaging of Enterprise Java Applications easier and faster
 > 
-	
+  
 >   * Deployment descriptor editors for weblogic.xml and weblogic-application.xml
 > 
-	
+  
 >   * Oracle Database Plug-in for Eclipse Data Tools Platform
 > 
-	
+  
 >   * JSF Facelets Tools Project (Incubator)
 > 
 

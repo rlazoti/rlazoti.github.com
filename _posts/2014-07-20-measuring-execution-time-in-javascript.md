@@ -1,4 +1,5 @@
 ---
+language: en
 comments: true
 date: 2014-07-20 11:00:00
 layout: post
@@ -33,7 +34,7 @@ var interpolate = function(template, data) {
     result = result.replace(
       new RegExp('#{' + property + '}', 'g'),
       data[property]
-	);
+  );
 
   return result;
 };
@@ -42,10 +43,10 @@ var generateMessageB = function(name, username, email) {
   return interpolate(
            "<h1>Hello #{name}</h1>" +
            "<p>Thank you for your registration.</p>" +
-		   "<p>Your username is: #{username}</p>" +
-		   "<p>Your email is: #{email}</p>",
-		   { name:name, username:username, email:email }
-		 );
+       "<p>Your username is: #{username}</p>" +
+       "<p>Your email is: #{email}</p>",
+       { name:name, username:username, email:email }
+     );
 };
 {% endhighlight %}
 

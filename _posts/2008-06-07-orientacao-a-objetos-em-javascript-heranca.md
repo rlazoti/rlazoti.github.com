@@ -1,4 +1,5 @@
 ---
+language: pt-br
 comments: true
 date: 2008-06-07 00:01:48
 layout: post
@@ -22,17 +23,17 @@ Primeiro o javascript para a classe Pessoa:
 
 {% highlight javascript linenos %}
 function Pessoa() {
-	this.nome;
-	this.setNome = setNome;
-	this.getNome = getNome;
+  this.nome;
+  this.setNome = setNome;
+  this.getNome = getNome;
 
-	function setNome(nome) {
-		this.nome = nome;
-	}
+  function setNome(nome) {
+    this.nome = nome;
+  }
 
-	function getNome() {
-		return this.nome;
-	}
+  function getNome() {
+    return this.nome;
+  }
 }
 {% endhighlight %}
 
@@ -40,17 +41,17 @@ Agora o javascript para a classe Amigo:
 
 {% highlight javascript linenos %}
 function Amigo() {
-	this.telefone;
-	this.getTelefone = getTelefone;
-	this.setTelefone = setTelefone;
+  this.telefone;
+  this.getTelefone = getTelefone;
+  this.setTelefone = setTelefone;
 
-	function setTelefone(telefone) {
-		this.telefone = telefone;
-	}
+  function setTelefone(telefone) {
+    this.telefone = telefone;
+  }
 
-	function getTelefone() {
-		return this.telefone;
-	}
+  function getTelefone() {
+    return this.telefone;
+  }
 }
 {% endhighlight %}
 

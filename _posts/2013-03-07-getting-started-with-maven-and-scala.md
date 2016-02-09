@@ -1,4 +1,5 @@
 ---
+language: en
 comments: true
 date: 2013-03-07 21:38:11
 layout: post
@@ -21,25 +22,25 @@ So, let's use a pom.xml for a simple java application like this:
 
 {% highlight xml linenos %}
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.rodrigolazoti</groupId>
-	<artifactId>scalaproject</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.com.rodrigolazoti</groupId>
+  <artifactId>scalaproject</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 </project>
 {% endhighlight %}
 
@@ -51,10 +52,10 @@ The Maven needs to know where to find the plugin and the Scala library, so add t
 
 {% highlight xml linenos %}
 <repositories>
-	<repository>
-		<id>scala-tools</id>
-		<url>https://oss.sonatype.org/content/groups/scala-tools/</url>
-	</repository>
+  <repository>
+    <id>scala-tools</id>
+    <url>https://oss.sonatype.org/content/groups/scala-tools/</url>
+  </repository>
 </repositories>
 {% endhighlight %}
 
@@ -66,9 +67,9 @@ Add this dependency to pom.xml:
 
 {% highlight xml linenos %}
 <dependency>
-	<groupId>org.scala-lang</groupId>
-	<artifactId>scala-library</artifactId>
-	<version>2.10.0</version>
+  <groupId>org.scala-lang</groupId>
+  <artifactId>scala-library</artifactId>
+  <version>2.10.0</version>
 </dependency>
 {% endhighlight %}
 
@@ -78,23 +79,23 @@ Add the maven-scala-plugin to pom.xml:
 
 {% highlight xml linenos %}
 <build>
-	<sourceDirectory>src/main/scala</sourceDirectory>
-	<testSourceDirectory>src/test/scala</testSourceDirectory>
-	<plugins>
-		<plugin>
-			<groupId>org.scala-tools</groupId>
-			<artifactId>maven-scala-plugin</artifactId>
-			<version>2.15.2</version>
-			<executions>
-				<execution>
-					<goals>
-						<goal>compile</goal>
-						<goal>testCompile</goal>
-					</goals>
-				</execution>
-			</executions>
-		</plugin>
-	</plugins>
+  <sourceDirectory>src/main/scala</sourceDirectory>
+  <testSourceDirectory>src/test/scala</testSourceDirectory>
+  <plugins>
+    <plugin>
+      <groupId>org.scala-tools</groupId>
+      <artifactId>maven-scala-plugin</artifactId>
+      <version>2.15.2</version>
+      <executions>
+        <execution>
+          <goals>
+            <goal>compile</goal>
+            <goal>testCompile</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
 </build>
 {% endhighlight %}
 
@@ -120,65 +121,65 @@ See below the complete project’s pom file:
 
 {% highlight xml linenos %}
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.rodrigolazoti</groupId>
-	<artifactId>scalaproject</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.com.rodrigolazoti</groupId>
+  <artifactId>scalaproject</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
-	<repositories>
-		<repository>
-			<id>scala-tools</id>
-			<url>https://oss.sonatype.org/content/groups/scala-tools/</url>
-		</repository>
-	</repositories>
+  <repositories>
+    <repository>
+      <id>scala-tools</id>
+      <url>https://oss.sonatype.org/content/groups/scala-tools/</url>
+    </repository>
+  </repositories>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.scala-lang</groupId>
-			<artifactId>scala-library</artifactId>
-			<version>2.10.0</version>
-		</dependency>
+  <dependencies>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>2.10.0</version>
+    </dependency>
 
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
-	<build>
-		<sourceDirectory>src/main/scala</sourceDirectory>
-		<testSourceDirectory>src/test/scala</testSourceDirectory>
-		<plugins>
-			<plugin>
-				<groupId>org.scala-tools</groupId>
-				<artifactId>maven-scala-plugin</artifactId>
-				<version>2.15.2</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>compile</goal>
-							<goal>testCompile</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<args>
-						<arg>-optimise</arg>
-						<arg>-unchecked</arg>
-						<arg>-deprecation</arg>
-					</args>
-					<charset>UTF-8</charset>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+  <build>
+    <sourceDirectory>src/main/scala</sourceDirectory>
+    <testSourceDirectory>src/test/scala</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.scala-tools</groupId>
+        <artifactId>maven-scala-plugin</artifactId>
+        <version>2.15.2</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+              <goal>testCompile</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <args>
+            <arg>-optimise</arg>
+            <arg>-unchecked</arg>
+            <arg>-deprecation</arg>
+          </args>
+          <charset>UTF-8</charset>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
 {% endhighlight %}

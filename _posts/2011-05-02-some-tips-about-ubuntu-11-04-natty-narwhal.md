@@ -1,4 +1,5 @@
 ---
+language: en
 comments: true
 date: 2011-05-02 15:03:52
 layout: post
@@ -53,7 +54,7 @@ gsettings set com.canonical.Unity.Panel systray-whitelist "['all']"
 {% endhighlight %}
 
 Then, restart Ubuntu.
-	
+  
   * How to remove the launcher auto-hide behavior
 
 For it, you need to install the Advanced Desktop Effects Settings (ccsm)
@@ -63,13 +64,13 @@ sudo apt-get install compizconfig-settings-manager
 {% endhighlight %}
 
 Then, use Alt+F2 shortcut key to open the "Run a command" dialog, type **about:config** and run it, change the property **Hide Launcher** to **Never.**
-	
+  
   * How to change the launcher icon size
 
 Here, you also need install the Advanced Desktop Effects Settings (ccsm).
 
 In the same window you used above, change the property **Laucher icon size** to another value.
-	
+  
   * How to add a CPU/memory monitor int the system tray
 
 Just type in your terminal:

@@ -1,4 +1,5 @@
 ---
+language: pt-br
 comments: true
 date: 2008-08-04 01:28:52
 layout: post
@@ -19,7 +20,7 @@ Vamos criar um cenário bem simples com duas entidades Cliente e Usuário para e
 
 Analisando este diagrama vemos que três propriedades são comuns entre as duas classes:
 
-  * codigo	
+  * codigo  
   * nome
   * dataCadastro
 

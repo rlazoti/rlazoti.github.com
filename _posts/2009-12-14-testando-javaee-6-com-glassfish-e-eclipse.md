@@ -1,4 +1,5 @@
 ---
+language: pt-br
 comments: true
 date: 2009-12-14 14:39:33
 layout: post
@@ -37,13 +38,13 @@ Agora vou substituir o conteúdo do arquivo web.xml por este abaixo:
 {% highlight xml linenos %}
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-	version="3.0">
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-	</welcome-file-list>
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0">
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>
 {% endhighlight %}
 
@@ -54,26 +55,26 @@ Criei também um script ant para fazer o deploy da nossa aplicação diretamente
 {% highlight xml linenos %}
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="FirstProject JavaEE 6" basedir="." default="deploy">
-	<property name="warfile" value="FirstProject" />
-	<target name="create">
-		<war destfile="${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
-			<classes dir="build/classes" />
-			<fileset dir="WebContent">
-				<exclude name="WEB-INF/web.xml" />
-			</fileset>
-		</war>
-	</target>
-	<target name="copy">
-		<copy todir="/Users/rodrigolazoti/Programs/glassfishv3/glassfish/domains/domain1/autodeploy" overwrite="true">
-			<fileset dir=".">
-				<include name="*.war" />
-			</fileset>
-		</copy>
-	</target>
-	<target name="deploy">
-		<antcall target="create" />
-		<antcall target="copy" />
-	</target>
+  <property name="warfile" value="FirstProject" />
+  <target name="create">
+    <war destfile="${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
+      <classes dir="build/classes" />
+      <fileset dir="WebContent">
+        <exclude name="WEB-INF/web.xml" />
+      </fileset>
+    </war>
+  </target>
+  <target name="copy">
+    <copy todir="/Users/rodrigolazoti/Programs/glassfishv3/glassfish/domains/domain1/autodeploy" overwrite="true">
+      <fileset dir=".">
+        <include name="*.war" />
+      </fileset>
+    </copy>
+  </target>
+  <target name="deploy">
+    <antcall target="create" />
+    <antcall target="copy" />
+  </target>
 </project>
 {% endhighlight %}
 
@@ -95,18 +96,18 @@ import javax.ejb.Stateless;
 @Stateless
 public class MyStatelessSessionBean {
 
-	public String createMessage( String username ) {
-		String message = "Hello World, ";
+  public String createMessage( String username ) {
+    String message = "Hello World, ";
 
-		if ( username != null && !"".equals( username.trim() ) ) {
-			message += username + "!";
-		}
-		else {
-			message += "stranger!";
-		}
+    if ( username != null && !"".equals( username.trim() ) ) {
+      message += username + "!";
+    }
+    else {
+      message += "stranger!";
+    }
 
-		return message;
-	}
+    return message;
+  }
 
 }
 {% endhighlight %}
@@ -121,11 +122,11 @@ import javax.ejb.Stateful;
 @Stateful
 public class MyStatefulSessionBean {
 
-	private int amountOfrequests = 0;
+  private int amountOfrequests = 0;
 
-	public int getAmountOfrequests() {
-		return ++amountOfrequests;
-	}
+  public int getAmountOfrequests() {
+    return ++amountOfrequests;
+  }
 
 }
 {% endhighlight %}
@@ -152,38 +153,38 @@ import br.com.rodrigolazoti.firstproject.service.MyStatelessSessionBean;
 @WebServlet( name = "MyServlet", urlPatterns = { "/hello" } )
 public class MyServlet extends HttpServlet {
 
-	private static final long serialVersionUID = -2206981309178199835L;
+  private static final long serialVersionUID = -2206981309178199835L;
 
-	@EJB
-	private MyStatefulSessionBean myStatefulSessionBean;
+  @EJB
+  private MyStatefulSessionBean myStatefulSessionBean;
 
-	@EJB
-	private MyStatelessSessionBean myStatelessSessionBean;
+  @EJB
+  private MyStatelessSessionBean myStatelessSessionBean;
 
-	@Override
-	protected void doGet( HttpServletRequest request, HttpServletResponse response )
-			throws ServletException, IOException {
-		String message = myStatelessSessionBean.createMessage( null );
-		request.setAttribute( "message", message );
+  @Override
+  protected void doGet( HttpServletRequest request, HttpServletResponse response )
+      throws ServletException, IOException {
+    String message = myStatelessSessionBean.createMessage( null );
+    request.setAttribute( "message", message );
 
-		int amountOfRequests = myStatefulSessionBean.getAmountOfrequests();
-		request.setAttribute( "amountOfRequests", amountOfRequests );
+    int amountOfRequests = myStatefulSessionBean.getAmountOfrequests();
+    request.setAttribute( "amountOfRequests", amountOfRequests );
 
-		request.getRequestDispatcher( "/hello.jsp" ).forward( request, response );
-	}
+    request.getRequestDispatcher( "/hello.jsp" ).forward( request, response );
+  }
 
-	@Override
-	protected void doPost( HttpServletRequest request, HttpServletResponse response )
-			throws ServletException, IOException {
-		String username = request.getParameter( "username" );
-		String message = myStatelessSessionBean.createMessage( username );
-		request.setAttribute( "message", message );
+  @Override
+  protected void doPost( HttpServletRequest request, HttpServletResponse response )
+      throws ServletException, IOException {
+    String username = request.getParameter( "username" );
+    String message = myStatelessSessionBean.createMessage( username );
+    request.setAttribute( "message", message );
 
-		int amountOfRequests = myStatefulSessionBean.getAmountOfrequests();
-		request.setAttribute( "amountOfRequests", amountOfRequests );
+    int amountOfRequests = myStatefulSessionBean.getAmountOfrequests();
+    request.setAttribute( "amountOfRequests", amountOfRequests );
 
-		request.getRequestDispatcher( "/hello.jsp" ).forward( request, response );
-	}
+    request.getRequestDispatcher( "/hello.jsp" ).forward( request, response );
+  }
 
 }
 {% endhighlight %}
@@ -239,8 +240,8 @@ E o conteúdo do arquivo hello.jsp:
 {% endhighlight %}
 
 Pronto, nosso exemplo já esta pronto e pode ser testado. Com vimos algumas novidades como:
-	
-  * Interface local e remota são opcionais no EJB 3.1.	
+  
+  * Interface local e remota são opcionais no EJB 3.1.  
   * No EJB 3.1, vôce pode empacotar seus EJB's em arquivos WAR junto com componentes da camada web. Você não precisa ter sua classes EJB definidas em um arquivo ejb-jar.
   * Agora as annotations podem ser usadas em mais tipos de componentes Java EE e o conjunto de anotações usados para injeção de dependência foi padronizada.
   * Ao invés de criar deployment descriptors, você pode anotar as classes para especificar que ela é um servlet.

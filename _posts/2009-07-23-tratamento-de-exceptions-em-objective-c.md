@@ -1,4 +1,5 @@
 ---
+language: pt-br
 comments: true
 date: 2009-07-23 09:54:28
 layout: post
@@ -36,13 +37,13 @@ A sintaxe comum para declar um bloco @try..@catch..@finally é:
 
 {% highlight objective-c linenos %}
 @try {
-	//codigo aqui
+  //codigo aqui
 }
 @catch( NSException *exception ) {
-	//tratamento da exception aqui	
+  //tratamento da exception aqui  
 }
 @finally {
-	//codigo sempre executado aqui	
+  //codigo sempre executado aqui  
 }
 {% endhighlight %}
 
@@ -54,15 +55,15 @@ NSLog( @"Creating the instance of NSObject" );
 NSObject *object = [[NSObject alloc] init];
 
 @try {
-	NSLog( @"try block" );
-	[object doNothing];
+  NSLog( @"try block" );
+  [object doNothing];
 }
 @catch( NSException *exception ) {
-	NSLog( @"catch block" );
-	NSLog(@"main: Caught %@: %@", [exception name], [exception  reason]);
+  NSLog( @"catch block" );
+  NSLog(@"main: Caught %@: %@", [exception name], [exception  reason]);
 }
 @finally {
-	NSLog(@"finally block");
+  NSLog(@"finally block");
 }
 {% endhighlight %}
 
@@ -81,16 +82,16 @@ Podemos tratar diversas exception em um único bloco @try, utilizando vários bl
 
 {% highlight objective-c linenos %}
 @try {
-	//codigo aqui
+  //codigo aqui
 }
 @catch( MyCustomException *exception ) {
-	//tratamento da exception aqui	
+  //tratamento da exception aqui  
 }
 @catch( NSException *exception ) {
-	//tratamento da exception aqui	
+  //tratamento da exception aqui  
 }
 @finally {
-	//codigo sempre executado aqui	
+  //codigo sempre executado aqui  
 }
 {% endhighlight %}
 
@@ -98,12 +99,12 @@ Agora vou demonstrar o uso da diretiva @throw que serve para lançar uma nova ex
 
 {% highlight objective-c linenos %}
 @try {
-	NSLog( @"try block" );
-	NSException *exception = [NSException exceptionWithName:@"HotTeaException" reason:@"The tea is too hot"  userInfo:nil];
-	@throw exception;
+  NSLog( @"try block" );
+  NSException *exception = [NSException exceptionWithName:@"HotTeaException" reason:@"The tea is too hot"  userInfo:nil];
+  @throw exception;
 }
 @catch( NSException *exception ) {
-	NSLog(@"main: Caught %@: %@", [exception name], [exception  reason]);
+  NSLog(@"main: Caught %@: %@", [exception name], [exception  reason]);
 }
 {% endhighlight %}
 

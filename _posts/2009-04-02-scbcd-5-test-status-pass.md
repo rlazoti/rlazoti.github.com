@@ -1,4 +1,5 @@
 ---
+language: pt-br
 comments: true
 date: 2009-04-02 23:02:48
 layout: post
@@ -23,7 +24,7 @@ Não tive muito tempo pra me dedicar e estudar tudo sobre a prova, por isso estu
 
 _O que utilizei para estudar:_
 
-  * Livro - Enterprise Javabeans 3.	
+  * Livro - Enterprise Javabeans 3. 
   * Simulado - EJBPlus 5
 
 _Sobre o livro:_

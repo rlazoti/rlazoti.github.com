@@ -1,4 +1,5 @@
 ---
+language: pt-br
 comments: true
 date: 2008-06-23 00:47:22
 layout: post
@@ -13,17 +14,17 @@ categories:
 Uma forma de se gerar aquivos PDF diretamente de sua aplicação Java é utilizando um projeto da Apache chamado <a href="http://xmlgraphics.apache.org/fop/index.html" target="_blank">FOP (Formatting Objects Processor)</a>, veja a seguir uma breve descriçao retirada do próprio site do projeto:
 <blockquote>FOP (Formatting Objects Processor) is the world's first print formatter driven by <a href="http://www.w3.org/TR/xsl/">XSL formatting objects (XSL-FO)</a> and the world's first output independent formatter. It is a Java application that reads a formatting object (FO) tree and renders the resulting pages to a specified output. The primary output target is PDF but other <a href="http://xmlgraphics.apache.org/fop/output.html">output formats</a> currently supported include:
 <ul>
-	<li>PDF (Portable Document Format)</li>
-	<li>PS (Adobe Postscript)</li>
-	<li>PCL (Printer Control Language)</li>
-	<li>AFP (MO:DCA)</li>
-	<li>SVG (Scalable Vector Graphics)</li>
-	<li>XML (area tree representation)</li>
-	<li>Print</li>
-	<li>AWT/Java2D</li>
-	<li>MIF</li>
-	<li>RTF (Rich Text Format)</li>
-	<li>TXT (text)</li>
+  <li>PDF (Portable Document Format)</li>
+  <li>PS (Adobe Postscript)</li>
+  <li>PCL (Printer Control Language)</li>
+  <li>AFP (MO:DCA)</li>
+  <li>SVG (Scalable Vector Graphics)</li>
+  <li>XML (area tree representation)</li>
+  <li>Print</li>
+  <li>AWT/Java2D</li>
+  <li>MIF</li>
+  <li>RTF (Rich Text Format)</li>
+  <li>TXT (text)</li>
 </ul>
 </blockquote>
 Vou demonstrar com um pequeno exemplo, como utilizar a conversão de um documento XML em um documento PDF por uma aplicação Java.
@@ -34,16 +35,16 @@ Para iniciar o exemplo vou baixar o arquivo binário no endereço:
 
 Agora criarei um projeto java e irei incluir os seguintes jar's necessários para o exemplo que encontram-se no download feito:
 <ul>
-	<li>avalon-framework-4.2.0.jar</li>
-	<li>batik-all-1.6.jar</li>
-	<li>commons-io-1.3.1.jar</li>
-	<li>commons-logging-1.0.4.jar</li>
-	<li>fop.jar</li>
-	<li>serializer-2.7.0.jar</li>
-	<li>xalan-2.7.0.jar</li>
-	<li>xercesImpl-2.7.1.jar</li>
-	<li>xml-apis-1.3.02.jar</li>
-	<li>xmlgraphics-commons-1.2.jar</li>
+  <li>avalon-framework-4.2.0.jar</li>
+  <li>batik-all-1.6.jar</li>
+  <li>commons-io-1.3.1.jar</li>
+  <li>commons-logging-1.0.4.jar</li>
+  <li>fop.jar</li>
+  <li>serializer-2.7.0.jar</li>
+  <li>xalan-2.7.0.jar</li>
+  <li>xercesImpl-2.7.1.jar</li>
+  <li>xml-apis-1.3.02.jar</li>
+  <li>xmlgraphics-commons-1.2.jar</li>
 </ul>
 Na raiz do projeto irei criar uma pasta chamada <em><strong>documentos</strong></em> e irei colocar um arquivo chamado <strong><em>projeto.xml</em></strong> com o seguinte conteúdo:
 

@@ -1,4 +1,5 @@
 ---
+language: pt-br
 comments: true
 date: 2008-07-10 17:59:57
 layout: post
@@ -17,7 +18,7 @@ Essas dicas não são novas e muito menos revolucionárias, até porque este fra
 
 Iniciando as dicas:
 <ol>
-	<li>Vou começar indicando o uso de <a href="http://struts.apache.org/1.3.8/userGuide/building_controller.html#dyna_action_form_classes" target="_blank"><span class="postbody">DynaActionForm</span></a> em substituição ao ActionForm, imagine ter uma classe Java para cada formulário de seu projeto? Teríamos inúmeras classes java que podem ser substituídas por mapeamento XML do formulário no arquivo de configuração do struts, o struts-config.xml.Exemplo de um formulário configurado no struts-config.xml utilizando DynaActionForm:
+  <li>Vou começar indicando o uso de <a href="http://struts.apache.org/1.3.8/userGuide/building_controller.html#dyna_action_form_classes" target="_blank"><span class="postbody">DynaActionForm</span></a> em substituição ao ActionForm, imagine ter uma classe Java para cada formulário de seu projeto? Teríamos inúmeras classes java que podem ser substituídas por mapeamento XML do formulário no arquivo de configuração do struts, o struts-config.xml.Exemplo de um formulário configurado no struts-config.xml utilizando DynaActionForm:
 
 {% highlight xml linenos %}
 <form -bean name="UsuarioForm" type="org.apache.struts.action.DynaActionForm">
@@ -28,7 +29,7 @@ Iniciando as dicas:
 {% endhighlight %}
   </li>
 
-	<li>Uma outra dica para economizar classes em java é ao invés de estender suas Actions da classe Action e assim ter uma classe para cada ação executada, estender da classe DispatchAction, assim pode-se utilizar mais de uma ação dentro de uma classe java.Classes Java estendendo de Action:
+  <li>Uma outra dica para economizar classes em java é ao invés de estender suas Actions da classe Action e assim ter uma classe para cada ação executada, estender da classe DispatchAction, assim pode-se utilizar mais de uma ação dentro de uma classe java.Classes Java estendendo de Action:
 {% highlight java linenos %}
 //arquivo  MinhaAction1.java
 public class IncluirUsuario extends Action {
@@ -67,14 +68,14 @@ public class Usuario extends DispatchAction {
 {% endhighlight %}
   </li>
 
-	<li>Para colocar o foco em seu input quando o formulário carrega é bem simples basta fazer o seguinte:
+  <li>Para colocar o foco em seu input quando o formulário carrega é bem simples basta fazer o seguinte:
 {% highlight jsp linenos %}
 <html :form action="UsuarioAcion" focus="Nome">
   <html :text property="Nome"/>
 </html>
 {% endhighlight %}
   </li>
-	
+  
   <li>Precisa limpar os dados de seu DynaActionForm ou DynaValidatorForm? Simples faça assim dentro de sua Action:
 {% highlight java linenos %}
   DynaActionForm formulario = (DynaActionForm) form;
@@ -82,7 +83,7 @@ public class Usuario extends DispatchAction {
 {% endhighlight %}
 </li>
 
-	<li> Deixarei um alguns links interessantes de como utilizar a validação server-side do próprio Struts, como utilizar Tiles em conjunto com Struts para compor seu layout de páginas entre outras dicas. <a href="http://struts.apache.org/1.3.8/userGuide/building_view.html" target="_blank"> </a><a href="http://struts.apache.org/1.3.8/userGuide/building_view.html" target="_blank">Documentação do Struts.</a>
+  <li> Deixarei um alguns links interessantes de como utilizar a validação server-side do próprio Struts, como utilizar Tiles em conjunto com Struts para compor seu layout de páginas entre outras dicas. <a href="http://struts.apache.org/1.3.8/userGuide/building_view.html" target="_blank"> </a><a href="http://struts.apache.org/1.3.8/userGuide/building_view.html" target="_blank">Documentação do Struts.</a>
 <a href="http://www.roseindia.net/struts/struts_validator_framework.shtml" target="_blank">Struts Validator Framework</a>.
 <a href="http://www.roseindia.net/struts/struts_tiles.shtml" target="_blank">Developing Simple Struts Tiles Application</a>.</li>
 </ol>

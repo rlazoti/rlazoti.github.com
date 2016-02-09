@@ -1,4 +1,5 @@
 ---
+language: pt-br
 comments: true
 date: 2009-04-29 23:28:49
 layout: post
@@ -39,7 +40,7 @@ Ok a mensagem é bem clara, então fui instalar o driver, e:
 {% highlight bash linenos %}
 _MacBook:projectTest rodrigo$ sudo gem install mysql
 Building native extensions.  This could take a while...
-ERROR:  Error installing mysql:	ERROR: Failed to build gem native extension.
+ERROR:  Error installing mysql: ERROR: Failed to build gem native extension.
 /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby extconf.rb install mysql
 checking for mysql_query() in -lmysqlclient... nochecking for main() in -lm... yes
 checking for mysql_query() in -lmysqlclient... nochecking for main() in -lz... yes

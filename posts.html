@@ -29,7 +29,7 @@ title: "All Blog Posts"
 
     {% endif %}
           <li class="entry-post">
-            <div class="entry-post-title">{{ post.title }}</div>
+            <div class="entry-post-title">[{{post.language}}] {{ post.title }}</div>
             <a href="{{ post.url }}">{{ site.url }}{{ post.url }}</a>
           </li>
 

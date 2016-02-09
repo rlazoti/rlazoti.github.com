@@ -1,4 +1,5 @@
 ---
+language: pt-br
 comments: true
 date: 2008-05-17 20:04:07
 layout: post
@@ -33,20 +34,20 @@ Pronto, já é possível utilizar as tags nas páginas jsp. irei colocar um pequ
 
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title></title>
 </meta>
 </head>
 <body>
-	<ext :body debug="true" loadingMask="true"></ext>
+  <ext :body debug="true" loadingMask="true"></ext>
   <ext :viewport layout="table"></ext>
   <ext :form.formPanel width="400" title="Cadastro">
-		<ext :form.textField fieldLabel="Nome" name="nome"/>
-		<ext :form.numberField fieldLabel="Idade" name="idade" value="0"/>
-		<ext :form.timeField fieldLabel="Hora Cadastro" name="hora"/>
-		<ext :datePicker id="Data" format="d/m/y"/>
-		<ext :button type="submit" text="Enviar" id="enviar" />
-	</ext>
+    <ext :form.textField fieldLabel="Nome" name="nome"/>
+    <ext :form.numberField fieldLabel="Idade" name="idade" value="0"/>
+    <ext :form.timeField fieldLabel="Hora Cadastro" name="hora"/>
+    <ext :datePicker id="Data" format="d/m/y"/>
+    <ext :button type="submit" text="Enviar" id="enviar" />
+  </ext>
 </body>
 </html>
 {% endhighlight %}

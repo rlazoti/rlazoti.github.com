@@ -1,4 +1,5 @@
 ---
+language: pt-br
 comments: true
 date: 2010-09-16 23:54:31
 layout: post
@@ -28,10 +29,10 @@ Um dos pontos que sempre vejo comentarem é sobre o tempo da prova (02:15) que �
 
 O material de estudo que utilizei foi:
 
-	
+  
   * Design patterns: elements of reuseable object-oriented software;
   * Core J2EE Patterns: Best Practices and Design Strategies, 2nd Edition;
-  * Enterprise JavaBeans 3.0.	
+  * Enterprise JavaBeans 3.0. 
   * Java Web Services - Up and Running.
   * McGraw Hill - SCEA Sun Certified Enterprise Architect for Java EE Study Guide Exam.310-051 - Capítulos 2, 4, 6 e 10.
   * JEE 5 Tutorial;

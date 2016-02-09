@@ -1,4 +1,5 @@
 ---
+language: pt-br
 comments: true
 date: 2008-09-12 10:24:36
 layout: post
@@ -19,15 +20,15 @@ No evento pude ver diversos trabalhos, misturando tecnologia, arte e muita criat
 
 Algumas dos trabalhos que mais gostei foram:
 
-	
+  
   * **_Performative Ecologies, de Ruairi Glynn (Irlandês, 2007)_**
 Trabalho baseado em robótica, contém quatro robôs que utilizam um software de reconhecimento de padrão facial e que consegue reconhecer a pessoa depois de ter sua foto armazenada.
 
-	
+  
   * **_The Mutations of the White Doe, de Nicolas Reeves (Canadá, 1990 - presente)_**
 Trabalho muito interessante onde a partir de uma música folclórica escandinava The White Doe, um algoritmo conseguiu transformá-la em três esculturas de polímero translúcido.
 
-	
+  
   * _**PixFlow #2, de LAb[au] (Bélgica, 2007)**_
 Trabalho composto de quatro displays dispostos verticalmente. Um software que simula um campo vetorial em que partículas fluem conforme a evolução de sua densidade tomando caminhos imprevisíveis e formando ramificações bem legais.
 

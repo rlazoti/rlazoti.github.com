@@ -1,4 +1,5 @@
 ---
+language: pt-br
 comments: true
 date: 2009-07-16 09:56:48
 layout: post
