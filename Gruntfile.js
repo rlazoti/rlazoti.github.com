@@ -51,7 +51,7 @@ module.exports = function(grunt) {
   config.gitcommit = {
     task: {
       options: {
-        message: "[BUILD] Added modified files to the next release"
+        message: "[BUILD] Add modified files to the next release"
       },
       files: {
         src: ["."]
