@@ -86,6 +86,11 @@ img {
     height: auto;
 }
 
+.info-label {
+    color: #f64;
+    padding-right: 15px;
+}
+
 section img{
   display: block;
   margin: 0 auto;
@@ -97,10 +102,6 @@ img.float_left {
 
 img.float_right {
     margin: 10px 0 30px 40px;
-}
-
-li {
-    /* list-style: none; Remove bullets on lists */
 }
 
 a, a:visited {
@@ -158,9 +159,9 @@ input, textarea {
             box-sizing: border-box;     /* Opera/IE 8+ */
 }
 
-    input:focus, textarea:focus {
-        background: #f2f2f2;
-    }
+input:focus, textarea:focus {
+    background: #f2f2f2;
+}
 
 
 /* --------------------------------------------------------------
@@ -728,7 +729,7 @@ blockquote {
     width: 100%;
     padding: 0 0 0 30px;
     margin: 10px 0 30px 0;
-    border-left: 10px solid #ff6644;
+    border-left: 5px solid #ff6644;
     font-size: 18px;
     color: #838689;
     -webkit-box-sizing: border-box;     /* Safari/Chrome, other WebKit */
