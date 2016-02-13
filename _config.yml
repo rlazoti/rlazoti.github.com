@@ -5,6 +5,7 @@ rdiscount extensions: [smart]
 paginate: 5
 gems:
   - jekyll-sitemap
+  - jekyll-paginate
 
 name: Rodrigo Lazoti
 url: http://rodrigolazoti.com.br
