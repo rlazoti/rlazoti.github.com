@@ -1,7 +1,6 @@
-markdown: rdiscount
+markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title
-rdiscount extensions: [smart]
 paginate: 5
 gems:
   - jekyll-sitemap
