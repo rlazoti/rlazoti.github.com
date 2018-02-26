@@ -3,3 +3,5 @@ _site/
 Gemfile.lock
 node_modules/
 .rvmrc
+.sass-cache/
+package-lock.json
