@@ -50,49 +50,13 @@ module.exports = function(grunt) {
     }
   };
 
-  config.gitcommit = {
-    task: {
-      options: {
-        message: "[BUILD] Add modified files to the next release"
-      },
-      files: {
-        src: ["."]
-      }
-    }
-  };
-
-  config.release = {
-    options: {
-      push: true,
-      pushTags: true,
-      npm: false,
-      tagName: 'version-<%= version %>',
-      commitMessage: '[BUILD] New release <%= version %>'
-    }
-  };
-
   grunt.initConfig(config);
 
   grunt.loadNpmTasks("grunt-jekyll");
-  grunt.loadNpmTasks("grunt-git");
-  grunt.loadNpmTasks("grunt-release");
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
 
-  grunt.registerTask("defineNextVersion", "Define next release version", function() {
-    var regex = new RegExp("^(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$"),
-        pkg   = grunt.file.readJSON("package.json");
-
-    grunt.option("versionNumber",
-                 regex.exec(pkg.version)[1] +
-                 regex.exec(pkg.version)[2] +
-                 (1 + parseInt(regex.exec(pkg.version)[3], 10)));
-
-    grunt.log.writeln("Next version defined: " + grunt.option("versionNumber"));
-  });
-
   grunt.registerTask("build", ["clean", "cssmin", "uglify"]);
   grunt.registerTask("default", ["build", "jekyll:serve"]);
-  grunt.registerTask("publish", ["defineNextVersion", "build", "gitcommit", "release"]);
 };
