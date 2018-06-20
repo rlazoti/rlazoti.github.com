@@ -11,7 +11,9 @@ module.exports = function(grunt) {
         dest: "_site",
         drafts: true,
         watch: true,
-        serve: true
+        serve: true,
+        host: "0.0.0.0",
+        port: 4000
       }
     }
   };
