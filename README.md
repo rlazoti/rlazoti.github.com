@@ -6,6 +6,11 @@ My personal blog [http://rodrigolazoti.com.br](http://rodrigolazoti.com.br)
 
 ## What am I using here?
 
+### Container
+
+* Docker
+* Docker Compose
+
 ### Ruby
 
 * Jekyll
@@ -18,21 +23,18 @@ My personal blog [http://rodrigolazoti.com.br](http://rodrigolazoti.com.br)
 
 ## How do I execute it locally?
 
-Just type:
+You must have Docker installed, so just type:
 
 ```sh
-$ grunt
+$ docker-compose up
 ```
 
-Then use http://localhost:4000 to access the blog through your browser.
+Then use http://localhost to access the blog through your browser.
 
 
-## How do I publish a new version?
-
-Type:
+## How to stop it?
 
 ```sh
-$ grunt publish
+$ docker-compose down
 ```
 
-It'll create a new build version, execute cssmin and uglify, after that the process will make a git commit and automatically publish it to github.

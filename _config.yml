@@ -2,7 +2,7 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title
 paginate: 5
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
 
@@ -18,4 +18,5 @@ disqus: rodrigolazotiblog
 userrepo: rlazoti
 gravatar_url: http://www.gravatar.com/avatar/d6cd131c2a59ae04ca2a41f9b6825b24.png
 
-exclude: [Gemfile, Gemfile.lock, package.json, Gruntfile.js, _assets, Dockerfile, docker-compose.yml, docker-entrypoint.sh]
+exclude: [Gemfile, Gemfile.lock, package.json, Gruntfile.js, _assets, Dockerfile,
+          docker-compose.yml, docker-entrypoint.sh, node_modules]
