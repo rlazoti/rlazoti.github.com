@@ -1,5 +1,7 @@
 FROM ruby:2.4-alpine
 
+MAINTAINER Rodrigo Lazoti <rodrigolazoti@gmail.com>
+
 RUN apk add --no-cache build-base gcc bash cmake nodejs
 
 RUN gem install jekyll
