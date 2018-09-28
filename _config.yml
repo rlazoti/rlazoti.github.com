@@ -7,7 +7,7 @@ plugins:
   - jekyll-paginate
 
 name: Rodrigo Lazoti
-url: http://rodrigolazoti.com.br
+url: https://rlazoti.github.io
 description: Blog about software development, technology, and cool stuff
 
 twitter: rodrigolazoti

@@ -1,7 +1,7 @@
 Blog
 ====
 
-My personal blog [http://rodrigolazoti.com.br](http://rodrigolazoti.com.br)
+My personal blog [https://rlazoti.github.io](https://rlazoti.github.io)
 
 
 ## What am I using here?
